@@ -1,0 +1,626 @@
+# Copyright (C) 2026 Mahdi Habibi | Tavoos Web
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Floating Call Button 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/mmhdih/Floating-Call-Button/issues\n"
+"POT-Creation-Date: 2026-09-29 12:07+0000\n"
+"PO-Revision-Date: 2026-09-29 12:07+0000\n"
+"Last-Translator: Mahdi Habibi <https://tavoosweb.ir/>\n"
+"Language-Team: Persian (Iran)\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: floating-call-button\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Plugin Name of the plugin
+#: includes/class-tavoos-fcb-admin.php:43 includes/class-tavoos-fcb-admin.php:358
+msgid "Floating Call Button"
+msgstr "دکمه شناور تماس"
+
+#: includes/class-tavoos-fcb-admin.php:44
+msgid "Call Button"
+msgstr "دکمه تماس"
+
+#: includes/class-tavoos-fcb-admin.php:75
+msgid "Settings"
+msgstr "تنظیمات"
+
+#. %s: author name
+#: includes/class-tavoos-fcb-admin.php:90
+#, php-format
+msgid "Designed by %s"
+msgstr "طراحی شده توسط %s"
+
+#. 1: author name linked to the author website, 2: plugin version number
+#: includes/class-tavoos-fcb-admin.php:91 includes/class-tavoos-fcb-admin.php:364
+msgid "Mahdi Habibi | Tavoos Web"
+msgstr "مهدی حبیبی | طاووس وب"
+
+#: includes/class-tavoos-fcb-admin.php:125
+msgid "Remove this channel?"
+msgstr "این کانال حذف شود؟"
+
+#: includes/class-tavoos-fcb-admin.php:126
+msgid "Choose an icon"
+msgstr "انتخاب آیکون"
+
+#: includes/class-tavoos-fcb-admin.php:127
+msgid "Use as icon"
+msgstr "استفاده به عنوان آیکون"
+
+#: includes/class-tavoos-fcb-admin.php:128 includes/class-tavoos-fcb-admin.php:277
+msgid "Untitled"
+msgstr "بدون عنوان"
+
+#: includes/class-tavoos-fcb-admin.php:129 includes/class-tavoos-fcb-admin.php:278
+msgid "No value entered"
+msgstr "مقدار وارد نشده"
+
+#: includes/class-tavoos-fcb-admin.php:206
+msgid "Preset icon"
+msgstr "آیکون آماده"
+
+#: includes/class-tavoos-fcb-admin.php:207
+msgid "Custom SVG code"
+msgstr "کد SVG دلخواه"
+
+#: includes/class-tavoos-fcb-admin.php:208
+msgid "Image (upload)"
+msgstr "تصویر (آپلود)"
+
+#. %s: the SVG attribute fill="currentColor"
+#: includes/class-tavoos-fcb-admin.php:240
+#, php-format
+msgid "Paste the full SVG code. To follow the \"Icon color\" setting, use %s."
+msgstr "کد کامل SVG را بچسبانید. برای هم‌رنگ شدن با «رنگ آیکون»، از %s استفاده کنید."
+
+#: includes/class-tavoos-fcb-admin.php:250
+msgid "Choose from Media Library"
+msgstr "انتخاب از کتابخانه رسانه"
+
+#: includes/class-tavoos-fcb-admin.php:252
+msgid "PNG, SVG or WebP with a transparent background works best."
+msgstr "فرمت‌های PNG، SVG یا WebP با پس‌زمینه شفاف پیشنهاد می‌شود."
+
+#: includes/class-tavoos-fcb-admin.php:274
+msgid "Drag to reorder"
+msgstr "برای جابجایی بکشید"
+
+#: includes/class-tavoos-fcb-admin.php:280
+msgid "Enabled"
+msgstr "فعال"
+
+#: includes/class-tavoos-fcb-admin.php:281
+msgid "Expand or collapse"
+msgstr "باز/بستن"
+
+#: includes/class-tavoos-fcb-admin.php:282
+msgid "Remove channel"
+msgstr "حذف کانال"
+
+#: includes/class-tavoos-fcb-admin.php:282
+msgid "Remove"
+msgstr "حذف"
+
+#: includes/class-tavoos-fcb-admin.php:288
+msgid "Channel type"
+msgstr "نوع کانال"
+
+#: includes/class-tavoos-fcb-admin.php:296
+msgid "Number / username / link"
+msgstr "شماره / نام کاربری / لینک"
+
+#: includes/class-tavoos-fcb-admin.php:301
+msgid "Title"
+msgstr "عنوان"
+
+#: includes/class-tavoos-fcb-admin.php:305
+msgid "Subtitle (optional)"
+msgstr "زیرعنوان (اختیاری)"
+
+#: includes/class-tavoos-fcb-admin.php:306
+msgid "e.g. Quick replies from our team"
+msgstr "مثلاً: پاسخ سریع کارشناسان"
+
+#: includes/class-tavoos-fcb-admin.php:309
+msgid "Default text"
+msgstr "متن پیش‌فرض"
+
+#: includes/class-tavoos-fcb-admin.php:313
+msgid "Open link in a new tab"
+msgstr "باز شدن لینک در تب جدید"
+
+#: includes/class-tavoos-fcb-admin.php:316
+msgid "Icon"
+msgstr "آیکون"
+
+#: includes/class-tavoos-fcb-admin.php:320
+msgid "Icon background color"
+msgstr "رنگ پس‌زمینه آیکون"
+
+#: includes/class-tavoos-fcb-admin.php:324 includes/class-tavoos-fcb-admin.php:445
+msgid "Icon color"
+msgstr "رنگ آیکون"
+
+#: includes/class-tavoos-fcb-admin.php:348 includes/class-tavoos-fcb-admin.php:386
+msgid "Contact channels"
+msgstr "کانال‌های ارتباطی"
+
+#: includes/class-tavoos-fcb-admin.php:349
+msgid "Button appearance"
+msgstr "ظاهر دکمه"
+
+#: includes/class-tavoos-fcb-admin.php:350
+msgid "Position"
+msgstr "موقعیت"
+
+#: includes/class-tavoos-fcb-admin.php:351
+msgid "Display & general"
+msgstr "نمایش و عمومی"
+
+#. 1: author name linked to the author website, 2: plugin version number
+#: includes/class-tavoos-fcb-admin.php:363
+#, php-format
+msgid "Designed by %1$s · Version %2$s"
+msgstr "طراحی شده توسط %1$s · نسخه %2$s"
+
+#. %s: drag handle icon
+#: includes/class-tavoos-fcb-admin.php:391
+#, php-format
+msgid "The ways to reach you that appear when the button is clicked. Drag %s to change the order. Channels without a value are not shown on the site."
+msgstr "راه‌های ارتباطی که با کلیک روی دکمه نمایش داده می‌شوند. ترتیب را با کشیدن %s تغییر دهید. کانال‌هایی که «مقدار» ندارند در سایت نمایش داده نمی‌شوند."
+
+#: includes/class-tavoos-fcb-admin.php:405
+msgid "No channels yet."
+msgstr "هنوز کانالی اضافه نشده است."
+
+#: includes/class-tavoos-fcb-admin.php:408
+msgid "Add a new channel:"
+msgstr "افزودن کانال جدید:"
+
+#: includes/class-tavoos-fcb-admin.php:414
+msgid "Add"
+msgstr "افزودن"
+
+#: includes/class-tavoos-fcb-admin.php:427
+msgid "Main button"
+msgstr "دکمه اصلی"
+
+#: includes/class-tavoos-fcb-admin.php:430
+msgid "Button icon"
+msgstr "آیکون دکمه"
+
+#: includes/class-tavoos-fcb-admin.php:434
+msgid "Background color"
+msgstr "رنگ پس‌زمینه"
+
+#: includes/class-tavoos-fcb-admin.php:438
+msgid "Second color (gradient)"
+msgstr "رنگ دوم (گرادیان)"
+
+#: includes/class-tavoos-fcb-admin.php:441
+msgid "Leave empty for a solid color."
+msgstr "برای رنگ ثابت (بدون گرادیان) این فیلد را خالی کنید."
+
+#: includes/class-tavoos-fcb-admin.php:449
+msgid "Button size"
+msgstr "اندازه دکمه"
+
+#: includes/class-tavoos-fcb-admin.php:451
+msgid "Desktop:"
+msgstr "دسکتاپ:"
+
+#: includes/class-tavoos-fcb-admin.php:452
+msgid "Mobile:"
+msgstr "موبایل:"
+
+#: includes/class-tavoos-fcb-admin.php:456
+msgid "Animation"
+msgstr "انیمیشن"
+
+#: includes/class-tavoos-fcb-admin.php:457
+msgid "Pulse ring around the button"
+msgstr "حلقه پالس دور دکمه"
+
+#: includes/class-tavoos-fcb-admin.php:462
+msgid "Preview"
+msgstr "پیش‌نمایش"
+
+#: includes/class-tavoos-fcb-admin.php:469
+msgid "The preview follows the position chosen in the Position tab."
+msgstr "پیش‌نمایش با موقعیت انتخاب‌شده در تب «موقعیت» هماهنگ است."
+
+#: includes/class-tavoos-fcb-admin.php:474
+msgid "Channel menu appearance"
+msgstr "ظاهر منوی کانال‌ها"
+
+#: includes/class-tavoos-fcb-admin.php:477
+msgid "Card background"
+msgstr "پس‌زمینه کارت‌ها"
+
+#: includes/class-tavoos-fcb-admin.php:481
+msgid "Title color"
+msgstr "رنگ عنوان"
+
+#: includes/class-tavoos-fcb-admin.php:485
+msgid "Subtitle color"
+msgstr "رنگ زیرعنوان"
+
+#: includes/class-tavoos-fcb-admin.php:489
+msgid "Card border color"
+msgstr "رنگ حاشیه کارت‌ها"
+
+#: includes/class-tavoos-fcb-admin.php:499
+msgid "Button position"
+msgstr "موقعیت دکمه"
+
+#: includes/class-tavoos-fcb-admin.php:511
+msgid "Custom position (percent)"
+msgstr "موقعیت دلخواه (درصدی)"
+
+#: includes/class-tavoos-fcb-admin.php:512
+msgid "Click the screen below or drag the dot, or type the values. 0% is the left/top edge and 100% is the right/bottom edge of the screen."
+msgstr "روی صفحه زیر کلیک کنید یا نقطه را بکشید، یا مقدارها را دستی وارد کنید. ۰٪ یعنی لبه چپ/بالا و ۱۰۰٪ یعنی لبه راست/پایین صفحه."
+
+#: includes/class-tavoos-fcb-admin.php:516
+msgid "Horizontal (W) from left:"
+msgstr "افقی (W) از چپ:"
+
+#: includes/class-tavoos-fcb-admin.php:517
+msgid "Vertical (H) from top:"
+msgstr "عمودی (H) از بالا:"
+
+#: includes/class-tavoos-fcb-admin.php:524
+msgid "Distance from edge (desktop)"
+msgstr "فاصله از لبه (دسکتاپ)"
+
+#: includes/class-tavoos-fcb-admin.php:526 includes/class-tavoos-fcb-admin.php:533
+msgid "Horizontal:"
+msgstr "افقی:"
+
+#: includes/class-tavoos-fcb-admin.php:527 includes/class-tavoos-fcb-admin.php:534
+msgid "Vertical:"
+msgstr "عمودی:"
+
+#: includes/class-tavoos-fcb-admin.php:531
+msgid "Distance from edge (mobile)"
+msgstr "فاصله از لبه (موبایل)"
+
+#: includes/class-tavoos-fcb-admin.php:535
+msgid "For example, increase the vertical distance if your theme has a bottom bar on mobile."
+msgstr "مثلاً اگر قالب شما در موبایل نوار پایینی دارد، فاصله عمودی را بیشتر کنید."
+
+#: includes/class-tavoos-fcb-admin.php:542
+msgid "Mobile breakpoint"
+msgstr "عرض نقطه شکست موبایل"
+
+#: includes/class-tavoos-fcb-admin.php:545
+msgid "Screens this wide or narrower count as mobile."
+msgstr "صفحه‌هایی با عرض کمتر یا مساوی این مقدار «موبایل» حساب می‌شوند."
+
+#: includes/class-tavoos-fcb-admin.php:549
+msgid "z-index"
+msgstr "z-index"
+
+#: includes/class-tavoos-fcb-admin.php:552
+msgid "Increase this if the button appears behind other parts of your site."
+msgstr "اگر دکمه زیر بخش‌های دیگر سایت می‌رود، این عدد را بیشتر کنید."
+
+#: includes/class-tavoos-fcb-admin.php:562
+msgid "General settings"
+msgstr "تنظیمات عمومی"
+
+#: includes/class-tavoos-fcb-admin.php:565
+msgid "Status"
+msgstr "وضعیت"
+
+#: includes/class-tavoos-fcb-admin.php:566
+msgid "Show the button on the site"
+msgstr "نمایش دکمه در سایت"
+
+#: includes/class-tavoos-fcb-admin.php:569
+msgid "Devices"
+msgstr "دستگاه‌ها"
+
+#: includes/class-tavoos-fcb-admin.php:571
+msgid "Desktop"
+msgstr "دسکتاپ"
+
+#: includes/class-tavoos-fcb-admin.php:572
+msgid "Mobile and tablet"
+msgstr "موبایل و تبلت"
+
+#: includes/class-tavoos-fcb-admin.php:576
+msgid "Single channel"
+msgstr "یک کانال"
+
+#: includes/class-tavoos-fcb-admin.php:577
+msgid "When only one channel is enabled, link the button straight to it (no menu)"
+msgstr "اگر فقط یک کانال فعال بود، دکمه مستقیم به همان لینک برود (بدون منو)"
+
+#: includes/class-tavoos-fcb-admin.php:580
+msgid "Button accessibility label"
+msgstr "متن دسترسی‌پذیری دکمه"
+
+#: includes/class-tavoos-fcb-admin.php:584
+msgid "Menu text direction"
+msgstr "جهت متن منو"
+
+#: includes/class-tavoos-fcb-admin.php:587
+msgid "Automatic (site language)"
+msgstr "خودکار (بر اساس زبان سایت)"
+
+#: includes/class-tavoos-fcb-admin.php:588
+msgid "Right to left"
+msgstr "راست به چپ"
+
+#: includes/class-tavoos-fcb-admin.php:589
+msgid "Left to right"
+msgstr "چپ به راست"
+
+#: includes/class-tavoos-fcb-admin.php:597
+msgid "Where to show"
+msgstr "نمایش در صفحات"
+
+#: includes/class-tavoos-fcb-admin.php:601
+msgid "All pages"
+msgstr "همه صفحات"
+
+#: includes/class-tavoos-fcb-admin.php:602
+msgid "Only selected pages"
+msgstr "فقط صفحات انتخاب‌شده"
+
+#: includes/class-tavoos-fcb-admin.php:603
+msgid "All pages except the selected ones"
+msgstr "همه صفحات به جز صفحات انتخاب‌شده"
+
+#: includes/class-tavoos-fcb-admin.php:612
+msgid "Site front page"
+msgstr "صفحه اصلی سایت"
+
+#: includes/class-tavoos-fcb-admin.php:614
+msgid "Pages"
+msgstr "برگه‌ها"
+
+#: includes/class-tavoos-fcb-admin.php:615
+msgid "Search pages…"
+msgstr "جستجوی برگه…"
+
+#: includes/class-tavoos-fcb-admin.php:625
+msgid "There are no pages."
+msgstr "برگه‌ای وجود ندارد."
+
+#: includes/class-tavoos-fcb-admin.php:629
+msgid "(no title)"
+msgstr "(بدون عنوان)"
+
+#: includes/class-tavoos-fcb-admin.php:642
+msgid "IDs of posts, products or any other content"
+msgstr "شناسه نوشته‌ها، محصولات یا هر نوع محتوای دیگر"
+
+#: includes/class-tavoos-fcb-admin.php:644
+msgid "Separate IDs with commas."
+msgstr "شناسه‌ها را با کاما جدا کنید."
+
+#: includes/class-tavoos-fcb-admin.php:651
+msgid "Save settings"
+msgstr "ذخیره تنظیمات"
+
+#: includes/class-tavoos-fcb-frontend.php:307 includes/class-tavoos-fcb-options.php:209
+msgid "Contact us"
+msgstr "تماس با ما"
+
+#: includes/class-tavoos-fcb-options.php:21
+msgid "Bottom right"
+msgstr "پایین راست"
+
+#: includes/class-tavoos-fcb-options.php:22
+msgid "Bottom left"
+msgstr "پایین چپ"
+
+#: includes/class-tavoos-fcb-options.php:23
+msgid "Bottom center"
+msgstr "پایین وسط"
+
+#: includes/class-tavoos-fcb-options.php:24
+msgid "Middle right"
+msgstr "وسط راست"
+
+#: includes/class-tavoos-fcb-options.php:25
+msgid "Middle left"
+msgstr "وسط چپ"
+
+#: includes/class-tavoos-fcb-options.php:26
+msgid "Top right"
+msgstr "بالا راست"
+
+#: includes/class-tavoos-fcb-options.php:27
+msgid "Top left"
+msgstr "بالا چپ"
+
+#: includes/class-tavoos-fcb-options.php:28
+msgid "Top center"
+msgstr "بالا وسط"
+
+#: includes/class-tavoos-fcb-options.php:29
+msgid "Custom (percent)"
+msgstr "دلخواه (درصدی)"
+
+#: includes/class-tavoos-fcb-options.php:45
+msgid "Phone call"
+msgstr "تماس تلفنی"
+
+#: includes/class-tavoos-fcb-options.php:50
+msgid "Phone number, preferably with the country code."
+msgstr "شماره تلفن (ترجیحاً با کد کشور)."
+
+#: includes/class-tavoos-fcb-options.php:55
+msgid "WhatsApp message"
+msgstr "پیام در واتساپ"
+
+#: includes/class-tavoos-fcb-options.php:60
+msgid "WhatsApp number with the country code, without + or leading zeros (e.g. 15551234567)."
+msgstr "شماره واتساپ با کد کشور و بدون + و صفر اول (مثل 989121234567)."
+
+#: includes/class-tavoos-fcb-options.php:61
+msgid "Default message"
+msgstr "متن پیش‌فرض پیام"
+
+#: includes/class-tavoos-fcb-options.php:65 includes/icons.php:37
+msgid "Telegram"
+msgstr "تلگرام"
+
+#: includes/class-tavoos-fcb-options.php:70
+msgid "Telegram username (without @) or a full link."
+msgstr "نام کاربری تلگرام (بدون @) یا لینک کامل."
+
+#: includes/class-tavoos-fcb-options.php:75 includes/icons.php:41
+msgid "Instagram"
+msgstr "اینستاگرام"
+
+#: includes/class-tavoos-fcb-options.php:80
+msgid "Instagram username or a full link."
+msgstr "نام کاربری اینستاگرام یا لینک کامل."
+
+#: includes/class-tavoos-fcb-options.php:85 includes/icons.php:63
+msgid "Email"
+msgstr "ایمیل"
+
+#: includes/class-tavoos-fcb-options.php:90
+msgid "Email address."
+msgstr "آدرس ایمیل."
+
+#: includes/class-tavoos-fcb-options.php:91
+msgid "Default email subject"
+msgstr "موضوع پیش‌فرض ایمیل"
+
+#: includes/class-tavoos-fcb-options.php:95 includes/icons.php:67
+msgid "SMS"
+msgstr "پیامک"
+
+#: includes/class-tavoos-fcb-options.php:100
+msgid "Number that receives the SMS."
+msgstr "شماره دریافت پیامک."
+
+#: includes/class-tavoos-fcb-options.php:101
+msgid "Default SMS text"
+msgstr "متن پیش‌فرض پیامک"
+
+#: includes/class-tavoos-fcb-options.php:105 includes/icons.php:49
+msgid "Eitaa"
+msgstr "ایتا"
+
+#: includes/class-tavoos-fcb-options.php:110
+msgid "Eitaa username or a full link."
+msgstr "نام کاربری ایتا یا لینک کامل."
+
+#: includes/class-tavoos-fcb-options.php:115 includes/icons.php:53
+msgid "Bale"
+msgstr "بله"
+
+#: includes/class-tavoos-fcb-options.php:120
+msgid "Bale username or a full link."
+msgstr "نام کاربری بله یا لینک کامل."
+
+#: includes/class-tavoos-fcb-options.php:125 includes/icons.php:58
+msgid "Rubika"
+msgstr "روبیکا"
+
+#: includes/class-tavoos-fcb-options.php:130
+msgid "Rubika username or a full link."
+msgstr "نام کاربری روبیکا یا لینک کامل."
+
+#: includes/class-tavoos-fcb-options.php:135 includes/icons.php:45
+msgid "LinkedIn"
+msgstr "لینکدین"
+
+#: includes/class-tavoos-fcb-options.php:140
+msgid "Full link to your LinkedIn page."
+msgstr "لینک کامل صفحه لینکدین."
+
+#: includes/class-tavoos-fcb-options.php:145
+msgid "Address on map"
+msgstr "آدرس روی نقشه"
+
+#: includes/class-tavoos-fcb-options.php:150
+msgid "Link to Google Maps or another map service."
+msgstr "لینک گوگل‌مپ، نشان یا بلد."
+
+#: includes/class-tavoos-fcb-options.php:155
+msgid "Custom link"
+msgstr "لینک دلخواه"
+
+#: includes/class-tavoos-fcb-options.php:160
+msgid "Any link (https:, tel:, mailto: and so on)."
+msgstr "هر لینکی (https:، tel:، mailto: و ...)."
+
+#: includes/class-tavoos-fcb-options.php:251
+msgid "Call us now"
+msgstr "همین حالا تماس بگیرید"
+
+#: includes/class-tavoos-fcb-options.php:255
+msgid "Quick replies from our team"
+msgstr "پاسخ سریع کارشناسان"
+
+#: includes/class-tavoos-fcb-options.php:256
+msgid "Hello, I am contacting you from your website."
+msgstr "سلام، از سایت پیام می‌دهم."
+
+#: includes/icons.php:29
+msgid "Phone"
+msgstr "تلفن"
+
+#: includes/icons.php:33
+msgid "WhatsApp"
+msgstr "واتساپ"
+
+#: includes/icons.php:71
+msgid "Chat"
+msgstr "گفتگو"
+
+#: includes/icons.php:75
+msgid "Send"
+msgstr "ارسال"
+
+#: includes/icons.php:79
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: includes/icons.php:83
+msgid "Location / map"
+msgstr "موقعیت / نقشه"
+
+#: includes/icons.php:87
+msgid "Link"
+msgstr "لینک"
+
+#: includes/icons.php:91
+msgid "Website"
+msgstr "وب‌سایت"
+
+#: includes/icons.php:95
+msgid "User / agent"
+msgstr "کاربر / کارشناس"
+
+#: includes/icons.php:99
+msgid "Question"
+msgstr "سؤال"
+
+#: includes/icons.php:103
+msgid "Close"
+msgstr "بستن"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/mmhdih/Floating-Call-Button"
+msgstr ""
+
+#. Description of the plugin
+msgid "Adds a floating contact button to all or selected pages. Clicking it opens your contact channels: phone, WhatsApp, Telegram, Instagram, email and more."
+msgstr "یک دکمه شناور به همه صفحات یا صفحات دلخواه اضافه می‌کند که با کلیک روی آن، کانال‌های ارتباطی (تماس، واتساپ، تلگرام، اینستاگرام، ایمیل و ...) نمایش داده می‌شوند."
+
+#. Author URI of the plugin
+msgid "https://tavoosweb.ir/"
+msgstr ""

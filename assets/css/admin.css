@@ -1,151 +1,151 @@
 /* Floating Call Button – admin – https://tavoosweb.ir/ */
-.fcb-wrap{max-width:1100px}
-.fcb-header{display:flex;align-items:center;gap:14px;margin:18px 0 8px}
-.fcb-header h1{margin:0;padding:0;font-size:22px;font-weight:700}
-.fcb-header__logo{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#F5B301,#FFD34D);color:#2B2118;display:grid;place-items:center;box-shadow:0 6px 18px rgba(245,179,1,.4)}
-.fcb-header__logo svg{width:24px;height:24px}
-.fcb-header__credit{margin:4px 0 0;color:#646970}
-.fcb-header__credit a{font-weight:600;text-decoration:none}
+.tavoos-fcb-wrap{max-width:1100px}
+.tavoos-fcb-header{display:flex;align-items:center;gap:14px;margin:18px 0 8px}
+.tavoos-fcb-header h1{margin:0;padding:0;font-size:22px;font-weight:700}
+.tavoos-fcb-header__logo{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#F5B301,#FFD34D);color:#2B2118;display:grid;place-items:center;box-shadow:0 6px 18px rgba(245,179,1,.4)}
+.tavoos-fcb-header__logo svg{width:24px;height:24px}
+.tavoos-fcb-header__credit{margin:4px 0 0;color:#646970}
+.tavoos-fcb-header__credit a{font-weight:600;text-decoration:none}
 
-.fcb-tabs{margin-bottom:0}
-.fcb-tabs .nav-tab .dashicons{font-size:17px;vertical-align:text-bottom}
-.fcb-tab{display:none;padding-top:16px}
-.fcb-tab.is-active{display:block}
-.fcb-card{background:#fff;border:1px solid #dcdcde;border-radius:10px;padding:18px 22px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-.fcb-card h2{margin:0 0 8px;font-size:16px}
-.fcb-card h3{font-size:14px;margin:18px 0 6px}
-.fcb-card .form-table th{width:190px}
-.fcb-card--split{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
-@media(max-width:960px){.fcb-card--split{grid-template-columns:1fr}}
-.fcb-label{display:block;font-weight:600;margin-bottom:6px}
-.fcb-submit{position:sticky;bottom:0;background:rgba(240,240,241,.92);backdrop-filter:blur(4px);padding:12px 0;border-top:1px solid #dcdcde;z-index:5}
-.fcb-num{white-space:nowrap}
-.fcb-num__unit{color:#646970}
+.tavoos-fcb-tabs{margin-bottom:0}
+.tavoos-fcb-tabs .nav-tab .dashicons{font-size:17px;vertical-align:text-bottom}
+.tavoos-fcb-tab{display:none;padding-top:16px}
+.tavoos-fcb-tab.is-active{display:block}
+.tavoos-fcb-card{background:#fff;border:1px solid #dcdcde;border-radius:10px;padding:18px 22px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.tavoos-fcb-card h2{margin:0 0 8px;font-size:16px}
+.tavoos-fcb-card h3{font-size:14px;margin:18px 0 6px}
+.tavoos-fcb-card .form-table th{width:190px}
+.tavoos-fcb-card--split{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+@media(max-width:960px){.tavoos-fcb-card--split{grid-template-columns:1fr}}
+.tavoos-fcb-label{display:block;font-weight:600;margin-bottom:6px}
+.tavoos-fcb-submit{position:sticky;bottom:0;background:rgba(240,240,241,.92);backdrop-filter:blur(4px);padding:12px 0;border-top:1px solid #dcdcde;z-index:5}
+.tavoos-fcb-num{white-space:nowrap}
+.tavoos-fcb-num__unit{color:#646970}
 [hidden]{display:none!important}
 
 /* سوئیچ */
-.fcb-switch{display:inline-flex;align-items:center;gap:8px;cursor:pointer;margin-inline-end:16px;user-select:none}
-.fcb-switch input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
-.fcb-switch__ui{width:36px;height:20px;border-radius:20px;background:#c3c4c7;position:relative;flex:0 0 36px;transition:background .2s}
-.fcb-switch__ui:after{content:"";position:absolute;top:2px;inset-inline-start:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:inset-inline-start .2s;box-shadow:0 1px 2px rgba(0,0,0,.2)}
-.fcb-switch input:checked+.fcb-switch__ui{background:#2271b1}
-.fcb-switch input:checked+.fcb-switch__ui:after{inset-inline-start:18px}
-.fcb-switch input:focus-visible+.fcb-switch__ui{box-shadow:0 0 0 2px #fff,0 0 0 4px #2271b1}
+.tavoos-fcb-switch{display:inline-flex;align-items:center;gap:8px;cursor:pointer;margin-inline-end:16px;user-select:none}
+.tavoos-fcb-switch input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.tavoos-fcb-switch__ui{width:36px;height:20px;border-radius:20px;background:#c3c4c7;position:relative;flex:0 0 36px;transition:background .2s}
+.tavoos-fcb-switch__ui:after{content:"";position:absolute;top:2px;inset-inline-start:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:inset-inline-start .2s;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+.tavoos-fcb-switch input:checked+.tavoos-fcb-switch__ui{background:#2271b1}
+.tavoos-fcb-switch input:checked+.tavoos-fcb-switch__ui:after{inset-inline-start:18px}
+.tavoos-fcb-switch input:focus-visible+.tavoos-fcb-switch__ui{box-shadow:0 0 0 2px #fff,0 0 0 4px #2271b1}
 
 /* دکمه‌های گروهی */
-.fcb-seg{display:inline-flex;flex-wrap:wrap;border:1px solid #c3c4c7;border-radius:8px;overflow:hidden;margin-bottom:10px}
-.fcb-seg label{cursor:pointer}
-.fcb-seg input{position:absolute;opacity:0;width:1px;height:1px}
-.fcb-seg span{display:block;padding:6px 14px;background:#fff;border-inline-end:1px solid #dcdcde}
-.fcb-seg label:last-child span{border-inline-end:0}
-.fcb-seg input:checked+span{background:#2271b1;color:#fff}
-.fcb-seg input:focus-visible+span{outline:2px solid #72aee6;outline-offset:-2px}
-.fcb-seg--block{display:flex;margin:6px 0 14px}
-.fcb-seg--block label{flex:1;text-align:center}
+.tavoos-fcb-seg{display:inline-flex;flex-wrap:wrap;border:1px solid #c3c4c7;border-radius:8px;overflow:hidden;margin-bottom:10px}
+.tavoos-fcb-seg label{cursor:pointer}
+.tavoos-fcb-seg input{position:absolute;opacity:0;width:1px;height:1px}
+.tavoos-fcb-seg span{display:block;padding:6px 14px;background:#fff;border-inline-end:1px solid #dcdcde}
+.tavoos-fcb-seg label:last-child span{border-inline-end:0}
+.tavoos-fcb-seg input:checked+span{background:#2271b1;color:#fff}
+.tavoos-fcb-seg input:focus-visible+span{outline:2px solid #72aee6;outline-offset:-2px}
+.tavoos-fcb-seg--block{display:flex;margin:6px 0 14px}
+.tavoos-fcb-seg--block label{flex:1;text-align:center}
 
 /* فیلد آیکون */
-.fcb-icon-panel{display:none}
-.fcb-icon-field[data-source="preset"] .fcb-icon-panel--preset,
-.fcb-icon-field[data-source="svg"] .fcb-icon-panel--svg,
-.fcb-icon-field[data-source="image"] .fcb-icon-panel--image{display:block}
-.fcb-icon-grid{display:flex;flex-wrap:wrap;gap:6px}
-.fcb-icon-opt{cursor:pointer}
-.fcb-icon-opt input{position:absolute;opacity:0;width:1px;height:1px}
-.fcb-icon-opt span{width:38px;height:38px;border:1px solid #dcdcde;border-radius:8px;display:grid;place-items:center;color:#3c434a;background:#fff;transition:.15s}
-.fcb-icon-opt span svg{width:20px;height:20px}
-.fcb-icon-opt:hover span{border-color:#2271b1}
-.fcb-icon-opt input:checked+span{background:#2271b1;border-color:#2271b1;color:#fff}
-.fcb-icon-opt input:focus-visible+span{box-shadow:0 0 0 2px #72aee6}
-.fcb-media{display:flex;gap:6px;flex-wrap:wrap}
+.tavoos-fcb-icon-panel{display:none}
+.tavoos-fcb-icon-field[data-source="preset"] .tavoos-fcb-icon-panel--preset,
+.tavoos-fcb-icon-field[data-source="svg"] .tavoos-fcb-icon-panel--svg,
+.tavoos-fcb-icon-field[data-source="image"] .tavoos-fcb-icon-panel--image{display:block}
+.tavoos-fcb-icon-grid{display:flex;flex-wrap:wrap;gap:6px}
+.tavoos-fcb-icon-opt{cursor:pointer}
+.tavoos-fcb-icon-opt input{position:absolute;opacity:0;width:1px;height:1px}
+.tavoos-fcb-icon-opt span{width:38px;height:38px;border:1px solid #dcdcde;border-radius:8px;display:grid;place-items:center;color:#3c434a;background:#fff;transition:.15s}
+.tavoos-fcb-icon-opt span svg{width:20px;height:20px}
+.tavoos-fcb-icon-opt:hover span{border-color:#2271b1}
+.tavoos-fcb-icon-opt input:checked+span{background:#2271b1;border-color:#2271b1;color:#fff}
+.tavoos-fcb-icon-opt input:focus-visible+span{box-shadow:0 0 0 2px #72aee6}
+.tavoos-fcb-media{display:flex;gap:6px;flex-wrap:wrap}
 
 /* کانال‌ها */
-.fcb-channels{margin:14px 0}
-.fcb-ch{border:1px solid #dcdcde;border-radius:10px;background:#fff;margin-bottom:10px;transition:box-shadow .2s}
-.fcb-ch.is-open{box-shadow:0 4px 14px rgba(0,0,0,.07);border-color:#c3c4c7}
-.fcb-ch.is-disabled .fcb-ch__preview,.fcb-ch.is-disabled .fcb-ch__summary{opacity:.45}
-.fcb-ch--placeholder{height:62px;border:2px dashed #72aee6;background:#f0f6fc}
-.fcb-ch__head{display:flex;align-items:center;gap:10px;padding:10px 12px}
-.fcb-ch__handle{cursor:move;color:#8c8f94}
-.fcb-ch__preview{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;flex:0 0 40px;background:var(--ic-bg,#eee);color:var(--ic-color,#222);overflow:hidden}
-.fcb-ch__preview svg,.fcb-ch__preview img{width:20px;height:20px;object-fit:contain}
-.fcb-ch__preview svg:not([fill]) path:not([fill]){fill:currentColor}
-.fcb-ch__summary{flex:1;min-width:0;background:none;border:0;padding:0;text-align:start;cursor:pointer;display:flex;flex-direction:column;gap:2px;font:inherit;color:inherit}
-.fcb-ch__title{font-size:14px}
-.fcb-ch__meta{color:#646970;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fcb-ch__enabled{margin:0}
-.fcb-ch__toggle .dashicons{transition:transform .2s}
-.fcb-ch.is-open .fcb-ch__toggle .dashicons{transform:rotate(180deg)}
-.fcb-ch__remove{color:#b32d2e}
-.fcb-ch__remove:hover{color:#8a2424}
-.fcb-ch__body{display:none;border-top:1px solid #f0f0f1;padding:16px}
-.fcb-ch.is-open .fcb-ch__body{display:block}
-.fcb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px}
-.fcb-field--full{grid-column:1/-1}
-.fcb-field>label:first-child:not(.fcb-switch){display:block;font-weight:600;margin-bottom:6px}
-.fcb-field .regular-text{width:100%;max-width:100%}
-.fcb-field .description{margin-top:4px}
-@media(max-width:782px){.fcb-grid{grid-template-columns:1fr}}
-.fcb-empty{padding:18px;text-align:center;color:#646970;border:1px dashed #c3c4c7;border-radius:10px}
-.fcb-add{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px;background:#f6f7f7;border-radius:10px}
-.fcb-add label{font-weight:600}
-.fcb-add .button .dashicons{font-size:16px;vertical-align:text-bottom}
+.tavoos-fcb-channels{margin:14px 0}
+.tavoos-fcb-ch{border:1px solid #dcdcde;border-radius:10px;background:#fff;margin-bottom:10px;transition:box-shadow .2s}
+.tavoos-fcb-ch.is-open{box-shadow:0 4px 14px rgba(0,0,0,.07);border-color:#c3c4c7}
+.tavoos-fcb-ch.is-disabled .tavoos-fcb-ch__preview,.tavoos-fcb-ch.is-disabled .tavoos-fcb-ch__summary{opacity:.45}
+.tavoos-fcb-ch--placeholder{height:62px;border:2px dashed #72aee6;background:#f0f6fc}
+.tavoos-fcb-ch__head{display:flex;align-items:center;gap:10px;padding:10px 12px}
+.tavoos-fcb-ch__handle{cursor:move;color:#8c8f94}
+.tavoos-fcb-ch__preview{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;flex:0 0 40px;background:var(--ic-bg,#eee);color:var(--ic-color,#222);overflow:hidden}
+.tavoos-fcb-ch__preview svg,.tavoos-fcb-ch__preview img{width:20px;height:20px;object-fit:contain}
+.tavoos-fcb-ch__preview svg:not([fill]) path:not([fill]){fill:currentColor}
+.tavoos-fcb-ch__summary{flex:1;min-width:0;background:none;border:0;padding:0;text-align:start;cursor:pointer;display:flex;flex-direction:column;gap:2px;font:inherit;color:inherit}
+.tavoos-fcb-ch__title{font-size:14px}
+.tavoos-fcb-ch__meta{color:#646970;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tavoos-fcb-ch__enabled{margin:0}
+.tavoos-fcb-ch__toggle .dashicons{transition:transform .2s}
+.tavoos-fcb-ch.is-open .tavoos-fcb-ch__toggle .dashicons{transform:rotate(180deg)}
+.tavoos-fcb-ch__remove{color:#b32d2e}
+.tavoos-fcb-ch__remove:hover{color:#8a2424}
+.tavoos-fcb-ch__body{display:none;border-top:1px solid #f0f0f1;padding:16px}
+.tavoos-fcb-ch.is-open .tavoos-fcb-ch__body{display:block}
+.tavoos-fcb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px}
+.tavoos-fcb-field--full{grid-column:1/-1}
+.tavoos-fcb-field>label:first-child:not(.tavoos-fcb-switch){display:block;font-weight:600;margin-bottom:6px}
+.tavoos-fcb-field .regular-text{width:100%;max-width:100%}
+.tavoos-fcb-field .description{margin-top:4px}
+@media(max-width:782px){.tavoos-fcb-grid{grid-template-columns:1fr}}
+.tavoos-fcb-empty{padding:18px;text-align:center;color:#646970;border:1px dashed #c3c4c7;border-radius:10px}
+.tavoos-fcb-add{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px;background:#f6f7f7;border-radius:10px}
+.tavoos-fcb-add label{font-weight:600}
+.tavoos-fcb-add .button .dashicons{font-size:16px;vertical-align:text-bottom}
 
 /* پیش‌نمایش */
-.fcb-preview-box{position:sticky;top:46px}
-.fcb-preview{height:420px;border-radius:12px;background:repeating-linear-gradient(45deg,#f6f7f7 0 12px,#f0f0f1 12px 24px);border:1px solid #dcdcde;position:relative;overflow:hidden}
-.fcb-preview__anchor{position:absolute;width:56px;height:56px;--g:18px}
-.fcb-preview__btn{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,var(--p-bg),var(--p-bg2));color:var(--p-color);display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.2)}
-.fcb-preview.is-pulse .fcb-preview__btn:before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--p-bg);opacity:.5;animation:fcbAdminPulse 2s infinite}
-@keyframes fcbAdminPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.35);opacity:0}}
-.fcb-preview__btn svg,.fcb-preview__btn img{width:24px;height:24px;object-fit:contain}
-.fcb-preview__menu{position:absolute;display:flex;flex-direction:column;gap:8px;width:200px}
-.fcb-preview[data-pos="bottom-right"] .fcb-preview__anchor{right:var(--g);bottom:var(--g)}
-.fcb-preview[data-pos="bottom-left"] .fcb-preview__anchor{left:var(--g);bottom:var(--g)}
-.fcb-preview[data-pos="bottom-center"] .fcb-preview__anchor{left:calc(50% - 28px);bottom:var(--g)}
-.fcb-preview[data-pos="top-right"] .fcb-preview__anchor{right:var(--g);top:var(--g)}
-.fcb-preview[data-pos="top-left"] .fcb-preview__anchor{left:var(--g);top:var(--g)}
-.fcb-preview[data-pos="top-center"] .fcb-preview__anchor{left:calc(50% - 28px);top:var(--g)}
-.fcb-preview[data-pos="middle-right"] .fcb-preview__anchor{right:var(--g);top:calc(50% - 28px)}
-.fcb-preview[data-pos="middle-left"] .fcb-preview__anchor{left:var(--g);top:calc(50% - 28px)}
-.fcb-preview[data-open="up"] .fcb-preview__menu{bottom:calc(100% + 12px)}
-.fcb-preview[data-open="down"] .fcb-preview__menu{top:calc(100% + 12px)}
-.fcb-preview[data-open="left"] .fcb-preview__menu{right:calc(100% + 10px);top:50%;transform:translateY(-50%);width:170px}
-.fcb-preview[data-open="right"] .fcb-preview__menu{left:calc(100% + 10px);top:50%;transform:translateY(-50%);width:170px}
-.fcb-preview[data-align="right"] .fcb-preview__menu{right:0}
-.fcb-preview[data-align="left"] .fcb-preview__menu{left:0}
-.fcb-preview[data-align="center"]:is([data-open="up"],[data-open="down"]) .fcb-preview__menu{left:50%;transform:translateX(-50%)}
-.fcb-preview__opt{display:flex;align-items:center;gap:10px;background:var(--p-card-bg);color:var(--p-card-txt);border:1px solid var(--p-card-bd);border-radius:16px;padding:8px 12px;box-shadow:0 8px 20px rgba(43,33,24,.14)}
-.fcb-preview__opt>span:last-child{display:flex;flex-direction:column;line-height:1.5;min-width:0}
-.fcb-preview__opt b{font-size:13px}
-.fcb-preview__opt small{font-size:11px;color:var(--p-card-sub)}
-.fcb-preview__ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;flex:0 0 36px;background:var(--ic-bg);color:var(--ic-color);overflow:hidden}
-.fcb-preview__ic svg,.fcb-preview__ic img{width:18px;height:18px;object-fit:contain}
+.tavoos-fcb-preview-box{position:sticky;top:46px}
+.tavoos-fcb-preview{height:420px;border-radius:12px;background:repeating-linear-gradient(45deg,#f6f7f7 0 12px,#f0f0f1 12px 24px);border:1px solid #dcdcde;position:relative;overflow:hidden}
+.tavoos-fcb-preview__anchor{position:absolute;width:56px;height:56px;--g:18px}
+.tavoos-fcb-preview__btn{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,var(--p-bg),var(--p-bg2));color:var(--p-color);display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.2)}
+.tavoos-fcb-preview.is-pulse .tavoos-fcb-preview__btn:before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--p-bg);opacity:.5;animation:tavoosFcbAdminPulse 2s infinite}
+@keyframes tavoosFcbAdminPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.35);opacity:0}}
+.tavoos-fcb-preview__btn svg,.tavoos-fcb-preview__btn img{width:24px;height:24px;object-fit:contain}
+.tavoos-fcb-preview__menu{position:absolute;display:flex;flex-direction:column;gap:8px;width:200px}
+.tavoos-fcb-preview[data-pos="bottom-right"] .tavoos-fcb-preview__anchor{right:var(--g);bottom:var(--g)}
+.tavoos-fcb-preview[data-pos="bottom-left"] .tavoos-fcb-preview__anchor{left:var(--g);bottom:var(--g)}
+.tavoos-fcb-preview[data-pos="bottom-center"] .tavoos-fcb-preview__anchor{left:calc(50% - 28px);bottom:var(--g)}
+.tavoos-fcb-preview[data-pos="top-right"] .tavoos-fcb-preview__anchor{right:var(--g);top:var(--g)}
+.tavoos-fcb-preview[data-pos="top-left"] .tavoos-fcb-preview__anchor{left:var(--g);top:var(--g)}
+.tavoos-fcb-preview[data-pos="top-center"] .tavoos-fcb-preview__anchor{left:calc(50% - 28px);top:var(--g)}
+.tavoos-fcb-preview[data-pos="middle-right"] .tavoos-fcb-preview__anchor{right:var(--g);top:calc(50% - 28px)}
+.tavoos-fcb-preview[data-pos="middle-left"] .tavoos-fcb-preview__anchor{left:var(--g);top:calc(50% - 28px)}
+.tavoos-fcb-preview[data-open="up"] .tavoos-fcb-preview__menu{bottom:calc(100% + 12px)}
+.tavoos-fcb-preview[data-open="down"] .tavoos-fcb-preview__menu{top:calc(100% + 12px)}
+.tavoos-fcb-preview[data-open="left"] .tavoos-fcb-preview__menu{right:calc(100% + 10px);top:50%;transform:translateY(-50%);width:170px}
+.tavoos-fcb-preview[data-open="right"] .tavoos-fcb-preview__menu{left:calc(100% + 10px);top:50%;transform:translateY(-50%);width:170px}
+.tavoos-fcb-preview[data-align="right"] .tavoos-fcb-preview__menu{right:0}
+.tavoos-fcb-preview[data-align="left"] .tavoos-fcb-preview__menu{left:0}
+.tavoos-fcb-preview[data-align="center"]:is([data-open="up"],[data-open="down"]) .tavoos-fcb-preview__menu{left:50%;transform:translateX(-50%)}
+.tavoos-fcb-preview__opt{display:flex;align-items:center;gap:10px;background:var(--p-card-bg);color:var(--p-card-txt);border:1px solid var(--p-card-bd);border-radius:16px;padding:8px 12px;box-shadow:0 8px 20px rgba(43,33,24,.14)}
+.tavoos-fcb-preview__opt>span:last-child{display:flex;flex-direction:column;line-height:1.5;min-width:0}
+.tavoos-fcb-preview__opt b{font-size:13px}
+.tavoos-fcb-preview__opt small{font-size:11px;color:var(--p-card-sub)}
+.tavoos-fcb-preview__ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;flex:0 0 36px;background:var(--ic-bg);color:var(--ic-color);overflow:hidden}
+.tavoos-fcb-preview__ic svg,.tavoos-fcb-preview__ic img{width:18px;height:18px;object-fit:contain}
 
 /* موقعیت */
-.fcb-positions{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin:12px 0 6px}
-.fcb-pos{cursor:pointer;text-align:center}
-.fcb-pos input{position:absolute;opacity:0;width:1px;height:1px}
-.fcb-pos__screen{display:block;height:72px;border:2px solid #dcdcde;border-radius:8px;background:#f6f7f7;position:relative;transition:.15s}
-.fcb-pos__screen i{position:absolute;width:14px;height:14px;border-radius:50%;background:#8c8f94}
-.fcb-pos__label{display:block;margin-top:6px}
-.fcb-pos input:checked+.fcb-pos__screen{border-color:#2271b1;background:#f0f6fc}
-.fcb-pos input:checked+.fcb-pos__screen i{background:#2271b1}
-.fcb-pos input:focus-visible+.fcb-pos__screen{box-shadow:0 0 0 2px #72aee6}
-.fcb-pos__screen--bottom-right i{right:8px;bottom:8px}
-.fcb-pos__screen--bottom-left i{left:8px;bottom:8px}
-.fcb-pos__screen--bottom-center i{left:calc(50% - 7px);bottom:8px}
-.fcb-pos__screen--middle-right i{right:8px;top:calc(50% - 7px)}
-.fcb-pos__screen--middle-left i{left:8px;top:calc(50% - 7px)}
-.fcb-pos__screen--top-right i{right:8px;top:8px}
-.fcb-pos__screen--top-left i{left:8px;top:8px}
-.fcb-pos__screen--top-center i{left:calc(50% - 7px);top:8px}
-.fcb-pos__screen--custom i{left:35%;top:40%;background:transparent;border:2px dashed #8c8f94}
-.fcb-pos input:checked+.fcb-pos__screen--custom i{border-color:#2271b1}
-.fcb-pos-custom__wrap{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-.fcb-pos-custom__screen{width:320px;max-width:100%;aspect-ratio:16/10;border:2px solid #2271b1;border-radius:10px;background:#f0f6fc linear-gradient(#dbe9f6 1px,transparent 1px) 0 0/10% 10%,#f0f6fc linear-gradient(90deg,#dbe9f6 1px,transparent 1px) 0 0/10% 10%;position:relative;cursor:crosshair;touch-action:none}
-#fcb-custom-dot{position:absolute;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#F5B301,#FFD34D);box-shadow:0 3px 10px rgba(0,0,0,.25);pointer-events:none}
+.tavoos-fcb-positions{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin:12px 0 6px}
+.tavoos-fcb-pos{cursor:pointer;text-align:center}
+.tavoos-fcb-pos input{position:absolute;opacity:0;width:1px;height:1px}
+.tavoos-fcb-pos__screen{display:block;height:72px;border:2px solid #dcdcde;border-radius:8px;background:#f6f7f7;position:relative;transition:.15s}
+.tavoos-fcb-pos__screen i{position:absolute;width:14px;height:14px;border-radius:50%;background:#8c8f94}
+.tavoos-fcb-pos__label{display:block;margin-top:6px}
+.tavoos-fcb-pos input:checked+.tavoos-fcb-pos__screen{border-color:#2271b1;background:#f0f6fc}
+.tavoos-fcb-pos input:checked+.tavoos-fcb-pos__screen i{background:#2271b1}
+.tavoos-fcb-pos input:focus-visible+.tavoos-fcb-pos__screen{box-shadow:0 0 0 2px #72aee6}
+.tavoos-fcb-pos__screen--bottom-right i{right:8px;bottom:8px}
+.tavoos-fcb-pos__screen--bottom-left i{left:8px;bottom:8px}
+.tavoos-fcb-pos__screen--bottom-center i{left:calc(50% - 7px);bottom:8px}
+.tavoos-fcb-pos__screen--middle-right i{right:8px;top:calc(50% - 7px)}
+.tavoos-fcb-pos__screen--middle-left i{left:8px;top:calc(50% - 7px)}
+.tavoos-fcb-pos__screen--top-right i{right:8px;top:8px}
+.tavoos-fcb-pos__screen--top-left i{left:8px;top:8px}
+.tavoos-fcb-pos__screen--top-center i{left:calc(50% - 7px);top:8px}
+.tavoos-fcb-pos__screen--custom i{left:35%;top:40%;background:transparent;border:2px dashed #8c8f94}
+.tavoos-fcb-pos input:checked+.tavoos-fcb-pos__screen--custom i{border-color:#2271b1}
+.tavoos-fcb-pos-custom__wrap{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.tavoos-fcb-pos-custom__screen{width:320px;max-width:100%;aspect-ratio:16/10;border:2px solid #2271b1;border-radius:10px;background:#f0f6fc linear-gradient(#dbe9f6 1px,transparent 1px) 0 0/10% 10%,#f0f6fc linear-gradient(90deg,#dbe9f6 1px,transparent 1px) 0 0/10% 10%;position:relative;cursor:crosshair;touch-action:none}
+#tavoos-fcb-custom-dot{position:absolute;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#F5B301,#FFD34D);box-shadow:0 3px 10px rgba(0,0,0,.25);pointer-events:none}
 
 /* برگه‌ها */
-.fcb-pages{max-height:260px;overflow:auto;border:1px solid #dcdcde;border-radius:8px;padding:8px 12px;margin:8px 0 16px;background:#fff}
-.fcb-pages label{display:block;padding:4px 0;padding-inline-start:calc(var(--depth,0) * 18px)}
-.fcb-pages em{color:#8c8f94}
+.tavoos-fcb-pages{max-height:260px;overflow:auto;border:1px solid #dcdcde;border-radius:8px;padding:8px 12px;margin:8px 0 16px;background:#fff}
+.tavoos-fcb-pages label{display:block;padding:4px 0;padding-inline-start:calc(var(--depth,0) * 18px)}
+.tavoos-fcb-pages em{color:#8c8f94}

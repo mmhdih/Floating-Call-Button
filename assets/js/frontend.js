@@ -3,12 +3,12 @@
 	'use strict';
 
 	function init() {
-		var root = document.getElementById('fcb');
+		var root = document.getElementById('tavoos-fcb');
 		if (!root) {
 			return;
 		}
-		var btn = root.querySelector('.fcb__toggle');
-		var menu = root.querySelector('.fcb__menu');
+		var btn = root.querySelector('.tavoos-fcb__toggle');
+		var menu = root.querySelector('.tavoos-fcb__menu');
 		if (!btn || !menu) {
 			return;
 		}

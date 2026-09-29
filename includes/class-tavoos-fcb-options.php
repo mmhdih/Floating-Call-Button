@@ -1,6 +1,6 @@
 <?php
 /**
- * مدیریت تنظیمات افزونه: مقادیر پیش‌فرض، خواندن و پاک‌سازی.
+ * Plugin settings: defaults, reading, migration and sanitization.
  *
  * @package Floating_Call_Button
  */
@@ -9,167 +9,167 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class FCB_Options {
+class Tavoos_FCB_Options {
 
 	/**
-	 * موقعیت‌های آماده دکمه.
+	 * Preset button positions.
 	 *
 	 * @return array<string, string>
 	 */
 	public static function positions() {
 		return array(
-			'bottom-right'  => 'پایین راست',
-			'bottom-left'   => 'پایین چپ',
-			'bottom-center' => 'پایین وسط',
-			'middle-right'  => 'وسط راست',
-			'middle-left'   => 'وسط چپ',
-			'top-right'     => 'بالا راست',
-			'top-left'      => 'بالا چپ',
-			'top-center'    => 'بالا وسط',
-			'custom'        => 'دلخواه (درصدی)',
+			'bottom-right'  => __( 'Bottom right', 'floating-call-button' ),
+			'bottom-left'   => __( 'Bottom left', 'floating-call-button' ),
+			'bottom-center' => __( 'Bottom center', 'floating-call-button' ),
+			'middle-right'  => __( 'Middle right', 'floating-call-button' ),
+			'middle-left'   => __( 'Middle left', 'floating-call-button' ),
+			'top-right'     => __( 'Top right', 'floating-call-button' ),
+			'top-left'      => __( 'Top left', 'floating-call-button' ),
+			'top-center'    => __( 'Top center', 'floating-call-button' ),
+			'custom'        => __( 'Custom (percent)', 'floating-call-button' ),
 		);
 	}
 
 	/**
-	 * انواع کانال‌های ارتباطی و مقادیر پیش‌فرض هر کدام.
+	 * Contact channel types and the defaults of each.
 	 *
-	 * با فیلتر `fcb_channel_types` قابل گسترش است.
+	 * Extend with the `tavoos_fcb_channel_types` filter.
 	 *
 	 * @return array<string, array>
 	 */
 	public static function channel_types() {
 		return apply_filters(
-			'fcb_channel_types',
+			'tavoos_fcb_channel_types',
 			array(
 				'phone'     => array(
-					'label'       => 'تماس تلفنی',
-					'icon'        => 'phone',
-					'bg'          => '#FFF1C2',
-					'color'       => '#2B2118',
-					'placeholder' => '+989121234567',
-					'hint'        => 'شماره تلفن (ترجیحاً با کد کشور).',
+					'label'         => __( 'Phone call', 'floating-call-button' ),
+					'icon'          => 'phone',
+					'bg'            => '#FFF1C2',
+					'color'         => '#2B2118',
+					'placeholder'   => '+15551234567',
+					'hint'          => __( 'Phone number, preferably with the country code.', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 0,
+					'new_tab'       => 0,
 				),
 				'whatsapp'  => array(
-					'label'       => 'پیام در واتساپ',
-					'icon'        => 'whatsapp',
-					'bg'          => '#25D366',
-					'color'       => '#FFFFFF',
-					'placeholder' => '989121234567',
-					'hint'        => 'شماره واتساپ با کد کشور و بدون + و صفر اول (مثل 989121234567).',
-					'message_label' => 'متن پیش‌فرض پیام',
-					'new_tab'     => 1,
+					'label'         => __( 'WhatsApp message', 'floating-call-button' ),
+					'icon'          => 'whatsapp',
+					'bg'            => '#25D366',
+					'color'         => '#FFFFFF',
+					'placeholder'   => '15551234567',
+					'hint'          => __( 'WhatsApp number with the country code, without + or leading zeros (e.g. 15551234567).', 'floating-call-button' ),
+					'message_label' => __( 'Default message', 'floating-call-button' ),
+					'new_tab'       => 1,
 				),
 				'telegram'  => array(
-					'label'       => 'تلگرام',
-					'icon'        => 'telegram',
-					'bg'          => '#229ED9',
-					'color'       => '#FFFFFF',
-					'placeholder' => 'username',
-					'hint'        => 'نام کاربری تلگرام (بدون @) یا لینک کامل.',
+					'label'         => __( 'Telegram', 'floating-call-button' ),
+					'icon'          => 'telegram',
+					'bg'            => '#229ED9',
+					'color'         => '#FFFFFF',
+					'placeholder'   => 'username',
+					'hint'          => __( 'Telegram username (without @) or a full link.', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 1,
+					'new_tab'       => 1,
 				),
 				'instagram' => array(
-					'label'       => 'اینستاگرام',
-					'icon'        => 'instagram',
-					'bg'          => '#E1306C',
-					'color'       => '#FFFFFF',
-					'placeholder' => 'username',
-					'hint'        => 'نام کاربری اینستاگرام یا لینک کامل.',
+					'label'         => __( 'Instagram', 'floating-call-button' ),
+					'icon'          => 'instagram',
+					'bg'            => '#E1306C',
+					'color'         => '#FFFFFF',
+					'placeholder'   => 'username',
+					'hint'          => __( 'Instagram username or a full link.', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 1,
+					'new_tab'       => 1,
 				),
 				'email'     => array(
-					'label'       => 'ایمیل',
-					'icon'        => 'email',
-					'bg'          => '#EA4335',
-					'color'       => '#FFFFFF',
-					'placeholder' => 'info@example.com',
-					'hint'        => 'آدرس ایمیل.',
-					'message_label' => 'موضوع پیش‌فرض ایمیل',
-					'new_tab'     => 0,
+					'label'         => __( 'Email', 'floating-call-button' ),
+					'icon'          => 'email',
+					'bg'            => '#EA4335',
+					'color'         => '#FFFFFF',
+					'placeholder'   => 'info@example.com',
+					'hint'          => __( 'Email address.', 'floating-call-button' ),
+					'message_label' => __( 'Default email subject', 'floating-call-button' ),
+					'new_tab'       => 0,
 				),
 				'sms'       => array(
-					'label'       => 'پیامک',
-					'icon'        => 'sms',
-					'bg'          => '#4CAF50',
-					'color'       => '#FFFFFF',
-					'placeholder' => '+989121234567',
-					'hint'        => 'شماره دریافت پیامک.',
-					'message_label' => 'متن پیش‌فرض پیامک',
-					'new_tab'     => 0,
+					'label'         => __( 'SMS', 'floating-call-button' ),
+					'icon'          => 'sms',
+					'bg'            => '#4CAF50',
+					'color'         => '#FFFFFF',
+					'placeholder'   => '+15551234567',
+					'hint'          => __( 'Number that receives the SMS.', 'floating-call-button' ),
+					'message_label' => __( 'Default SMS text', 'floating-call-button' ),
+					'new_tab'       => 0,
 				),
 				'eitaa'     => array(
-					'label'       => 'ایتا',
-					'icon'        => 'eitaa',
-					'bg'          => '#EE7D23',
-					'color'       => '#FFFFFF',
-					'placeholder' => 'username',
-					'hint'        => 'نام کاربری ایتا یا لینک کامل.',
+					'label'         => __( 'Eitaa', 'floating-call-button' ),
+					'icon'          => 'eitaa',
+					'bg'            => '#EE7D23',
+					'color'         => '#FFFFFF',
+					'placeholder'   => 'username',
+					'hint'          => __( 'Eitaa username or a full link.', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 1,
+					'new_tab'       => 1,
 				),
 				'bale'      => array(
-					'label'       => 'بله',
-					'icon'        => 'bale',
-					'bg'          => '#35A99A',
-					'color'       => '#FFFFFF',
-					'placeholder' => 'username',
-					'hint'        => 'نام کاربری بله یا لینک کامل.',
+					'label'         => __( 'Bale', 'floating-call-button' ),
+					'icon'          => 'bale',
+					'bg'            => '#35A99A',
+					'color'         => '#FFFFFF',
+					'placeholder'   => 'username',
+					'hint'          => __( 'Bale username or a full link.', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 1,
+					'new_tab'       => 1,
 				),
 				'rubika'    => array(
-					'label'       => 'روبیکا',
-					'icon'        => 'rubika',
-					'bg'          => '#F4F1FA',
-					'color'       => '#6A3FA0',
-					'placeholder' => 'username',
-					'hint'        => 'نام کاربری روبیکا یا لینک کامل.',
+					'label'         => __( 'Rubika', 'floating-call-button' ),
+					'icon'          => 'rubika',
+					'bg'            => '#F4F1FA',
+					'color'         => '#6A3FA0',
+					'placeholder'   => 'username',
+					'hint'          => __( 'Rubika username or a full link.', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 1,
+					'new_tab'       => 1,
 				),
 				'linkedin'  => array(
-					'label'       => 'لینکدین',
-					'icon'        => 'linkedin',
-					'bg'          => '#0A66C2',
-					'color'       => '#FFFFFF',
-					'placeholder' => 'https://www.linkedin.com/company/...',
-					'hint'        => 'لینک کامل صفحه لینکدین.',
+					'label'         => __( 'LinkedIn', 'floating-call-button' ),
+					'icon'          => 'linkedin',
+					'bg'            => '#0A66C2',
+					'color'         => '#FFFFFF',
+					'placeholder'   => 'https://www.linkedin.com/company/...',
+					'hint'          => __( 'Full link to your LinkedIn page.', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 1,
+					'new_tab'       => 1,
 				),
 				'location'  => array(
-					'label'       => 'آدرس روی نقشه',
-					'icon'        => 'location',
-					'bg'          => '#34A853',
-					'color'       => '#FFFFFF',
-					'placeholder' => 'https://maps.google.com/...',
-					'hint'        => 'لینک گوگل‌مپ، نشان یا بلد.',
+					'label'         => __( 'Address on map', 'floating-call-button' ),
+					'icon'          => 'location',
+					'bg'            => '#34A853',
+					'color'         => '#FFFFFF',
+					'placeholder'   => 'https://maps.google.com/...',
+					'hint'          => __( 'Link to Google Maps or another map service.', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 1,
+					'new_tab'       => 1,
 				),
 				'custom'    => array(
-					'label'       => 'لینک دلخواه',
-					'icon'        => 'link',
-					'bg'          => '#607D8B',
-					'color'       => '#FFFFFF',
-					'placeholder' => 'https://example.com',
-					'hint'        => 'هر لینکی (https:، tel:، mailto: و ...).',
+					'label'         => __( 'Custom link', 'floating-call-button' ),
+					'icon'          => 'link',
+					'bg'            => '#607D8B',
+					'color'         => '#FFFFFF',
+					'placeholder'   => 'https://example.com',
+					'hint'          => __( 'Any link (https:, tel:, mailto: and so on).', 'floating-call-button' ),
 					'message_label' => '',
-					'new_tab'     => 1,
+					'new_tab'       => 1,
 				),
 			)
 		);
 	}
 
 	/**
-	 * یک کانال با مقادیر پیش‌فرض نوع مشخص.
+	 * A channel filled with the defaults of its type.
 	 *
-	 * @param string $type نوع کانال.
-	 * @param array  $args مقادیر جایگزین.
+	 * @param string $type Channel type.
+	 * @param array  $args Values that override the defaults.
 	 * @return array
 	 */
 	public static function channel_defaults( $type = 'custom', $args = array() ) {
@@ -197,19 +197,19 @@ class FCB_Options {
 	}
 
 	/**
-	 * مقادیر پیش‌فرض تنظیمات.
+	 * Default settings.
 	 *
 	 * @return array
 	 */
 	public static function defaults() {
 		return array(
-			// عمومی.
+			// General.
 			'enabled'           => 1,
 			'single_direct'     => 0,
-			'aria_label'        => 'تماس با ما',
+			'aria_label'        => __( 'Contact us', 'floating-call-button' ),
 			'direction'         => 'auto',
 
-			// نمایش.
+			// Display rules.
 			'display_mode'      => 'all',
 			'pages'             => array(),
 			'front_page'        => 0,
@@ -217,7 +217,7 @@ class FCB_Options {
 			'show_desktop'      => 1,
 			'show_mobile'       => 1,
 
-			// موقعیت.
+			// Position.
 			'position'          => 'bottom-right',
 			'offset_x'          => 22,
 			'offset_y'          => 24,
@@ -228,7 +228,7 @@ class FCB_Options {
 			'mobile_offset_y'   => 78,
 			'z_index'           => 9990,
 
-			// ظاهر دکمه اصلی.
+			// Main button appearance.
 			'size'              => 60,
 			'mobile_size'       => 54,
 			'icon_type'         => 'preset',
@@ -240,20 +240,20 @@ class FCB_Options {
 			'icon_color'        => '#2B2118',
 			'pulse'             => 1,
 
-			// ظاهر منو.
+			// Menu appearance.
 			'card_bg'           => '#FFFFFF',
 			'card_text'         => '#2B2118',
 			'card_subtext'      => '#8A7D70',
 			'card_border'       => '#F5EAD0',
 
-			// کانال‌ها.
+			// Channels.
 			'channels'          => array(
-				self::channel_defaults( 'phone', array( 'subtitle' => 'همین حالا تماس بگیرید' ) ),
+				self::channel_defaults( 'phone', array( 'subtitle' => __( 'Call us now', 'floating-call-button' ) ) ),
 				self::channel_defaults(
 					'whatsapp',
 					array(
-						'subtitle' => 'پاسخ سریع کارشناسان',
-						'message'  => 'سلام، از سایت پیام می‌دهم.',
+						'subtitle' => __( 'Quick replies from our team', 'floating-call-button' ),
+						'message'  => __( 'Hello, I am contacting you from your website.', 'floating-call-button' ),
 					)
 				),
 				self::channel_defaults( 'telegram', array( 'enabled' => 0 ) ),
@@ -262,12 +262,12 @@ class FCB_Options {
 	}
 
 	/**
-	 * تنظیمات فعلی ادغام‌شده با پیش‌فرض‌ها.
+	 * Current settings merged with the defaults.
 	 *
 	 * @return array
 	 */
 	public static function get() {
-		$saved = get_option( FCB_OPTION );
+		$saved = get_option( TAVOOS_FCB_OPTION );
 		if ( ! is_array( $saved ) ) {
 			return self::defaults();
 		}
@@ -275,18 +275,33 @@ class FCB_Options {
 	}
 
 	/**
-	 * هنگام فعال‌سازی، تنظیمات پیش‌فرض ذخیره شود.
+	 * Store the default settings on activation.
 	 */
 	public static function activate() {
-		if ( false === get_option( FCB_OPTION ) ) {
-			add_option( FCB_OPTION, self::defaults() );
+		self::maybe_migrate();
+		if ( false === get_option( TAVOOS_FCB_OPTION ) ) {
+			add_option( TAVOOS_FCB_OPTION, self::defaults() );
 		}
 	}
 
 	/**
-	 * پاک‌سازی ورودی فرم تنظیمات.
+	 * Move settings saved by version 1.1 and earlier (option `fcb_settings`) to the new option name.
+	 */
+	public static function maybe_migrate() {
+		$legacy = get_option( 'fcb_settings' );
+		if ( false === $legacy ) {
+			return;
+		}
+		if ( false === get_option( TAVOOS_FCB_OPTION ) && is_array( $legacy ) ) {
+			add_option( TAVOOS_FCB_OPTION, $legacy );
+		}
+		delete_option( 'fcb_settings' );
+	}
+
+	/**
+	 * Sanitize the settings form input.
 	 *
-	 * @param mixed $input ورودی خام.
+	 * @param mixed $input Raw input.
 	 * @return array
 	 */
 	public static function sanitize( $input ) {
@@ -294,7 +309,7 @@ class FCB_Options {
 		$in  = is_array( $input ) ? wp_unslash( $input ) : array();
 		$out = array();
 
-		// چک‌باکس‌ها.
+		// Checkboxes.
 		foreach ( array( 'enabled', 'single_direct', 'front_page', 'show_desktop', 'show_mobile', 'pulse' ) as $key ) {
 			$out[ $key ] = empty( $in[ $key ] ) ? 0 : 1;
 		}
@@ -331,7 +346,7 @@ class FCB_Options {
 			$color       = isset( $in[ $key ] ) ? sanitize_hex_color( $in[ $key ] ) : '';
 			$out[ $key ] = $color ? $color : $d[ $key ];
 		}
-		// رنگ دوم گرادیان اختیاری است (خالی = رنگ ثابت).
+		// The second gradient color is optional (empty means a solid color).
 		$out['bg_color2'] = isset( $in['bg_color2'] ) ? (string) sanitize_hex_color( $in['bg_color2'] ) : '';
 
 		$out['channels'] = array();
@@ -347,9 +362,9 @@ class FCB_Options {
 	}
 
 	/**
-	 * پاک‌سازی یک کانال.
+	 * Sanitize one channel.
 	 *
-	 * @param array $c ورودی خام کانال.
+	 * @param array $c Raw channel input.
 	 * @return array
 	 */
 	protected static function sanitize_channel( $c ) {
@@ -366,7 +381,7 @@ class FCB_Options {
 				'type'       => $type,
 				'title'      => isset( $c['title'] ) ? sanitize_text_field( $c['title'] ) : '',
 				'subtitle'   => isset( $c['subtitle'] ) ? sanitize_text_field( $c['subtitle'] ) : '',
-				// sanitize_text_field کاراکترهای %xx لینک‌ها را حذف می‌کند، پس فقط تگ‌ها و فاصله‌ها حذف می‌شوند.
+				// sanitize_text_field() would strip %xx sequences from links, so only tags and whitespace are removed.
 				'value'      => isset( $c['value'] ) ? trim( preg_replace( '/[\r\n\t ]+/', ' ', wp_strip_all_tags( $c['value'] ) ) ) : '',
 				'message'    => isset( $c['message'] ) ? sanitize_textarea_field( $c['message'] ) : '',
 				'new_tab'    => empty( $c['new_tab'] ) ? 0 : 1,
@@ -378,27 +393,27 @@ class FCB_Options {
 	}
 
 	/**
-	 * پاک‌سازی فیلدهای آیکون (مشترک بین دکمه اصلی و کانال‌ها).
+	 * Sanitize the icon fields (shared by the main button and channels).
 	 *
-	 * @param array  $in           ورودی.
-	 * @param string $default_icon آیکون پیش‌فرض.
+	 * @param array  $in           Input.
+	 * @param string $default_icon Default icon key.
 	 * @return array
 	 */
 	protected static function sanitize_icon( $in, $default_icon ) {
-		$icons = fcb_get_icons();
+		$icons = tavoos_fcb_get_icons();
 
 		return array(
 			'icon_type' => self::choice( $in, 'icon_type', array( 'preset', 'svg', 'image' ), 'preset' ),
 			'icon'      => isset( $in['icon'], $icons[ $in['icon'] ] ) ? $in['icon'] : $default_icon,
-			'icon_svg'  => isset( $in['icon_svg'] ) ? fcb_sanitize_svg( $in['icon_svg'] ) : '',
+			'icon_svg'  => isset( $in['icon_svg'] ) ? tavoos_fcb_sanitize_svg( $in['icon_svg'] ) : '',
 			'icon_img'  => isset( $in['icon_img'] ) ? esc_url_raw( trim( $in['icon_img'] ) ) : '',
 		);
 	}
 
 	/**
-	 * تبدیل رشته شناسه‌ها به آرایه عددی.
+	 * Parse a list of post IDs into integers.
 	 *
-	 * @param string|array $ids شناسه‌ها.
+	 * @param string|array $ids IDs.
 	 * @return int[]
 	 */
 	public static function parse_ids( $ids ) {
@@ -410,9 +425,9 @@ class FCB_Options {
 	}
 
 	/**
-	 * تبدیل ارقام فارسی و عربی به انگلیسی.
+	 * Convert Persian and Arabic digits to Latin digits.
 	 *
-	 * @param string $str رشته.
+	 * @param string $str String.
 	 * @return string
 	 */
 	public static function latin_digits( $str ) {
@@ -428,18 +443,31 @@ class FCB_Options {
 	}
 
 	/**
-	 * مقدار انتخابی از بین گزینه‌های مجاز.
+	 * A value restricted to a list of allowed choices.
+	 *
+	 * @param array  $in      Input.
+	 * @param string $key     Key.
+	 * @param array  $allowed Allowed values.
+	 * @param string $fallback Fallback.
+	 * @return string
 	 */
-	protected static function choice( $in, $key, $allowed, $default ) {
-		return isset( $in[ $key ] ) && in_array( $in[ $key ], $allowed, true ) ? $in[ $key ] : $default;
+	protected static function choice( $in, $key, $allowed, $fallback ) {
+		return isset( $in[ $key ] ) && in_array( $in[ $key ], $allowed, true ) ? $in[ $key ] : $fallback;
 	}
 
 	/**
-	 * عدد محدود به بازه.
+	 * A number clamped to a range.
+	 *
+	 * @param array     $in      Input.
+	 * @param string    $key     Key.
+	 * @param int|float $min     Minimum.
+	 * @param int|float $max     Maximum.
+	 * @param int|float $fallback Fallback.
+	 * @return int|float
 	 */
-	protected static function number( $in, $key, $min, $max, $default ) {
+	protected static function number( $in, $key, $min, $max, $fallback ) {
 		if ( ! isset( $in[ $key ] ) || '' === trim( (string) $in[ $key ] ) ) {
-			return $default;
+			return $fallback;
 		}
 		$value = (float) self::latin_digits( $in[ $key ] );
 		$value = max( $min, min( $max, $value ) );

@@ -155,16 +155,16 @@
 
 | فیلتر | کاربرد |
 |---|---|
-| `fcb_should_display` | تصمیم نهایی نمایش دکمه `( bool $show, array $settings )` |
-| `fcb_channels` | تغییر لیست کانال‌های نهایی `( array $channels, array $settings )` |
-| `fcb_channel_url` | تغییر لینک یک کانال `( string $url, array $channel )` |
-| `fcb_channel_types` | افزودن نوع کانال جدید |
-| `fcb_icons` | افزودن آیکون آماده جدید (`label` و `path` در viewBox ‏24×24، یا `svg` برای آیکون چندرنگ) |
+| `tavoos_fcb_should_display` | تصمیم نهایی نمایش دکمه `( bool $show, array $settings )` |
+| `tavoos_fcb_channels` | تغییر لیست کانال‌های نهایی `( array $channels, array $settings )` |
+| `tavoos_fcb_channel_url` | تغییر لینک یک کانال `( string $url, array $channel )` |
+| `tavoos_fcb_channel_types` | افزودن نوع کانال جدید |
+| `tavoos_fcb_icons` | افزودن آیکون آماده جدید (`label` و `path` در viewBox ‏24×24، یا `svg` برای آیکون چندرنگ) |
 
 نمونه: مخفی کردن دکمه در صفحه سبد خرید ووکامرس
 
 ```php
-add_filter( 'fcb_should_display', function ( $show ) {
+add_filter( 'tavoos_fcb_should_display', function ( $show ) {
 	return ( function_exists( 'is_cart' ) && is_cart() ) ? false : $show;
 } );
 ```
@@ -172,15 +172,24 @@ add_filter( 'fcb_should_display', function ( $show ) {
 ## ساختار فایل‌ها
 
 ```
-floating-call-button.php      فایل اصلی افزونه
-uninstall.php                 حذف تنظیمات هنگام پاک کردن افزونه
+floating-call-button.php            فایل اصلی افزونه
+uninstall.php                       حذف تنظیمات هنگام پاک کردن افزونه
 includes/
-  icons.php                   آیکون‌های آماده و پاک‌سازی SVG
-  class-fcb-options.php       تنظیمات پیش‌فرض، انواع کانال و پاک‌سازی ورودی
-  class-fcb-frontend.php      نمایش دکمه در سایت
-  class-fcb-admin.php         صفحه تنظیمات در پیشخوان
-assets/css, assets/js         استایل و اسکریپت سایت و پیشخوان
+  icons.php                         آیکون‌های آماده و پاک‌سازی SVG
+  class-tavoos-fcb-options.php      تنظیمات پیش‌فرض، انواع کانال و پاک‌سازی ورودی
+  class-tavoos-fcb-frontend.php     نمایش دکمه در سایت
+  class-tavoos-fcb-admin.php        صفحه تنظیمات در پیشخوان
+languages/                          فایل ترجمه فارسی (fa_IR) و قالب ترجمه (.pot)
+assets/css, assets/js               استایل و اسکریپت سایت و پیشخوان
 ```
+
+## ترجمه
+
+متن‌های اصلی افزونه انگلیسی هستند و ترجمه فارسی همراه افزونه ارائه می‌شود؛ یعنی در سایت‌های فارسی همه‌چیز فارسی و در سایت‌های دیگر انگلیسی نمایش داده می‌شود. برای زبان‌های دیگر از فایل `languages/floating-call-button.pot` استفاده کنید.
+
+## ارتقا از نسخه ۱.۱ و قبل‌تر
+
+از نسخه ۱.۲ پیشوند همه نام‌ها در کد `tavoos_fcb_` است. تنظیمات قبلی خودکار منتقل می‌شوند، ولی اگر در کد خودتان از فیلترهای `fcb_*` استفاده کرده‌اید، نام آن‌ها را به `tavoos_fcb_*` تغییر دهید.
 
 ## نیازمندی‌ها
 
