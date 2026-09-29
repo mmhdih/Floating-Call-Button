@@ -4,7 +4,7 @@ Tags: whatsapp, telegram, call button, floating button, contact
 Requires at least: 5.6
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,10 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 3. از منوی «دکمه تماس» در پیشخوان تنظیمات را انجام دهید.
 
 == Changelog ==
+
+= 1.1.0 =
+* آیکون اختصاصی ایتا، بله و روبیکا.
+* پشتیبانی از آیکون‌های چندرنگ در آیکون‌های آماده.
 
 = 1.0.0 =
 * نسخه اول.

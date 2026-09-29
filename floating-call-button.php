@@ -3,7 +3,7 @@
  * Plugin Name:       دکمه شناور تماس (Floating Call Button)
  * Plugin URI:        https://tavoosweb.ir/
  * Description:       یک دکمه شناور به همه صفحات یا صفحات دلخواه اضافه می‌کند که با کلیک روی آن، کانال‌های ارتباطی (تماس، واتساپ، تلگرام و ...) نمایش داده می‌شوند. طراحی شده توسط <a href="https://tavoosweb.ir/" target="_blank">مهدی حبیبی | طاووس وب</a>
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 5.6
  * Requires PHP:      7.2
  * Author:            مهدی حبیبی | طاووس وب
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'FCB_VERSION', '1.0.0' );
+define( 'FCB_VERSION', '1.1.0' );
 define( 'FCB_FILE', __FILE__ );
 define( 'FCB_DIR', plugin_dir_path( __FILE__ ) );
 define( 'FCB_URL', plugin_dir_url( __FILE__ ) );
