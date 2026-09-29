@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,12 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check plugin version matches tag
+      - name: Read plugin version
+        id: version
         run: |
-          TAG="${GITHUB_REF_NAME#v}"
           VERSION=$(grep -m1 -oP '^\s*\*\s*Version:\s*\K[0-9.]+' floating-call-button.php)
-          echo "tag=$TAG plugin=$VERSION"
-          test "$TAG" = "$VERSION"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Plugin version: $VERSION"
+          if [ "$GITHUB_REF_TYPE" = "tag" ] && [ "${GITHUB_REF_NAME#v}" != "$VERSION" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match plugin version $VERSION"
+            exit 1
+          fi
 
       - name: Build plugin zip
         run: git archive --format=zip --prefix=floating-call-button/ -o floating-call-button.zip HEAD
@@ -27,10 +32,13 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
-          name: دکمه شناور تماس ${{ github.ref_name }}
+          tag_name: v${{ steps.version.outputs.version }}
+          target_commitish: ${{ github.sha }}
+          name: دکمه شناور تماس v${{ steps.version.outputs.version }}
+          make_latest: true
           files: floating-call-button.zip
           body: |
-            ## دکمه شناور تماس (Floating Call Button) ${{ github.ref_name }}
+            ## دکمه شناور تماس (Floating Call Button) v${{ steps.version.outputs.version }}
 
             طراحی شده توسط [مهدی حبیبی | طاووس وب](https://tavoosweb.ir/)
 
