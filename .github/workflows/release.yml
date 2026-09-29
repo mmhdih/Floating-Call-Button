@@ -1,0 +1,42 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check plugin version matches tag
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          VERSION=$(grep -m1 -oP '^\s*\*\s*Version:\s*\K[0-9.]+' floating-call-button.php)
+          echo "tag=$TAG plugin=$VERSION"
+          test "$TAG" = "$VERSION"
+
+      - name: Build plugin zip
+        run: git archive --format=zip --prefix=floating-call-button/ -o floating-call-button.zip HEAD
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: دکمه شناور تماس ${{ github.ref_name }}
+          files: floating-call-button.zip
+          body: |
+            ## دکمه شناور تماس (Floating Call Button) ${{ github.ref_name }}
+
+            طراحی شده توسط [مهدی حبیبی | طاووس وب](https://tavoosweb.ir/)
+
+            ### نصب
+            1. فایل `floating-call-button.zip` را دانلود کنید.
+            2. در پیشخوان وردپرس به **افزونه‌ها ← افزودن ← بارگذاری افزونه** بروید و فایل را آپلود کنید.
+            3. افزونه را فعال کنید و از منوی **دکمه تماس** تنظیمات را انجام دهید.
+
+            آموزش تصویری کامل: [README](https://github.com/${{ github.repository }}#readme)
