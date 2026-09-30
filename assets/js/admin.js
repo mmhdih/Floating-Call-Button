@@ -2,8 +2,8 @@
 (function ($) {
 	'use strict';
 
-	var data = window.tavoosFcbAdmin || { option: 'tavoos_fcb_settings', icons: {}, types: {}, i18n: {} };
-	var opt = data.option || 'tavoos_fcb_settings';
+	var data = window.tavoosFcbAdmin || { option: 'tavoos_fcb_options', icons: {}, types: {}, i18n: {} };
+	var opt = data.option || 'tavoos_fcb_options';
 
 	function field(key) {
 		return 'input[name="' + opt + '[' + key + ']"]';

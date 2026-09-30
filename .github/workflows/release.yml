@@ -18,7 +18,7 @@ jobs:
       - name: Read plugin version
         id: version
         run: |
-          VERSION=$(grep -m1 -oP '^\s*\*\s*Version:\s*\K[0-9.]+' floating-call-button.php)
+          VERSION=$(grep -m1 -oP '^\s*\*\s*Version:\s*\K[0-9.]+' tavoos-floating-call-button.php)
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Plugin version: $VERSION"
           if [ "$GITHUB_REF_TYPE" = "tag" ] && [ "${GITHUB_REF_NAME#v}" != "$VERSION" ]; then
@@ -27,23 +27,23 @@ jobs:
           fi
 
       - name: Build plugin zip
-        run: git archive --format=zip --prefix=floating-call-button/ -o floating-call-button.zip HEAD
+        run: git archive --format=zip --prefix=tavoos-floating-call-button/ -o tavoos-floating-call-button.zip HEAD
 
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.version.outputs.version }}
           target_commitish: ${{ github.sha }}
-          name: دکمه شناور تماس v${{ steps.version.outputs.version }}
+          name: Tavoos Floating Call Button v${{ steps.version.outputs.version }}
           make_latest: true
-          files: floating-call-button.zip
+          files: tavoos-floating-call-button.zip
           body: |
-            ## دکمه شناور تماس (Floating Call Button) v${{ steps.version.outputs.version }}
+            ## دکمه شناور تماس (Tavoos Floating Call Button) v${{ steps.version.outputs.version }}
 
             طراحی شده توسط [مهدی حبیبی | طاووس وب](https://tavoosweb.ir/)
 
             ### نصب
-            1. فایل `floating-call-button.zip` را دانلود کنید.
+            1. فایل `tavoos-floating-call-button.zip` را دانلود کنید.
             2. در پیشخوان وردپرس به **افزونه‌ها ← افزودن ← بارگذاری افزونه** بروید و فایل را آپلود کنید.
             3. افزونه را فعال کنید و از منوی **دکمه تماس** تنظیمات را انجام دهید.
 

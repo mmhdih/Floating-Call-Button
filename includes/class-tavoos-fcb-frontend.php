@@ -2,7 +2,7 @@
 /**
  * Front-end output of the floating button.
  *
- * @package Floating_Call_Button
+ * @package Tavoos_Floating_Call_Button
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -304,7 +304,7 @@ class Tavoos_FCB_Frontend {
 		}
 
 		$direct = ! empty( $s['single_direct'] ) && 1 === count( $channels );
-		$label  = $s['aria_label'] ? $s['aria_label'] : __( 'Contact us', 'floating-call-button' );
+		$label  = $s['aria_label'] ? $s['aria_label'] : __( 'Contact us', 'tavoos-floating-call-button' );
 		$icon   = tavoos_fcb_render_icon( $s );
 		?>
 		<div id="tavoos-fcb" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" dir="<?php echo esc_attr( $dir ); ?>">

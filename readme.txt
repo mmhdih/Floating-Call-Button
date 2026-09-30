@@ -1,10 +1,10 @@
-=== Floating Call Button ===
+=== Tavoos Floating Call Button ===
 Contributors: mmhdih
 Tags: call button, whatsapp, telegram, floating button, contact
 Requires at least: 5.6
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ A floating contact button that opens your contact channels: phone, WhatsApp, Tel
 
 == Description ==
 
-Floating Call Button adds a floating button to all of your pages, or only to the pages you choose. When a visitor clicks it, a menu opens with the ways they can reach you.
+Tavoos Floating Call Button adds a floating button to all of your pages, or only to the pages you choose. When a visitor clicks it, a menu opens with the ways they can reach you.
 
 = Features =
 
@@ -27,6 +27,7 @@ Floating Call Button adds a floating button to all of your pages, or only to the
 * Live preview in the settings page.
 * Optional direct link when only one channel is enabled.
 * Right-to-left support, keyboard accessible (Esc closes the menu), no jQuery on the front end. Assets load only on pages where the button is shown.
+* Translation ready. Translations are delivered through translate.wordpress.org.
 
 = For developers =
 
@@ -54,6 +55,11 @@ Yes. For the main button and for every channel you can pick a preset icon, paste
 
 == Changelog ==
 
+= 1.3.0 =
+* Renamed to Tavoos Floating Call Button; the slug and text domain are now `tavoos-floating-call-button`.
+* Translations now come from translate.wordpress.org; the plugin ships only the translation template.
+* If the older "Floating Call Button" copy is active, this plugin stays idle and shows a notice instead of loading twice.
+
 = 1.2.0 =
 * All code prefixes are now at least four characters (`tavoos_fcb_`). Settings saved by earlier versions are migrated automatically.
 * The source strings are now in English, with a bundled Persian (fa_IR) translation.
@@ -67,6 +73,9 @@ Yes. For the main button and for every channel you can pick a preset icon, paste
 * First release.
 
 == Upgrade Notice ==
+
+= 1.3.0 =
+The plugin was renamed and now installs in a new folder. Install it, deactivate and delete the old "Floating Call Button" plugin, then activate this one. Your settings are kept.
 
 = 1.2.0 =
 Filters were renamed from fcb_* to tavoos_fcb_*. Update any custom code that uses them.

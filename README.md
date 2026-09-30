@@ -1,6 +1,6 @@
 <div dir="rtl">
 
-# دکمه شناور تماس (Floating Call Button)
+# دکمه شناور تماس طاووس (Tavoos Floating Call Button)
 
 افزونه وردپرسی برای افزودن یک **دکمه شناور** به همه صفحات یا صفحات دلخواه سایت. با کلیک روی دکمه، منویی از **کانال‌های ارتباطی** (تماس تلفنی، واتساپ، تلگرام، اینستاگرام، ایمیل، پیامک، ایتا، بله، روبیکا، لینک دلخواه و ...) باز می‌شود.
 
@@ -28,11 +28,11 @@
 
 ## دانلود
 
-آخرین نسخه آماده نصب را از بخش [Releases](https://github.com/mmhdih/Floating-Call-Button/releases/latest) دانلود کنید (فایل `floating-call-button.zip`).
+آخرین نسخه آماده نصب را از بخش [Releases](https://github.com/mmhdih/Floating-Call-Button/releases/latest) دانلود کنید (فایل `tavoos-floating-call-button.zip`).
 
 ## نصب
 
-1. فایل `floating-call-button.zip` را از [Releases](https://github.com/mmhdih/Floating-Call-Button/releases/latest) دانلود کنید و از **افزونه‌ها ← افزودن ← بارگذاری افزونه** آپلود کنید (یا پوشه افزونه را در مسیر `wp-content/plugins/` قرار دهید).
+1. فایل `tavoos-floating-call-button.zip` را از [Releases](https://github.com/mmhdih/Floating-Call-Button/releases/latest) دانلود کنید و از **افزونه‌ها ← افزودن ← بارگذاری افزونه** آپلود کنید (یا پوشه افزونه را در مسیر `wp-content/plugins/` قرار دهید).
 2. از منوی **افزونه‌ها**، افزونه «دکمه شناور تماس» را فعال کنید.
 3. منوی جدید **دکمه تماس** در پیشخوان اضافه می‌شود.
 
@@ -172,20 +172,31 @@ add_filter( 'tavoos_fcb_should_display', function ( $show ) {
 ## ساختار فایل‌ها
 
 ```
-floating-call-button.php            فایل اصلی افزونه
+tavoos-floating-call-button.php     فایل اصلی افزونه
 uninstall.php                       حذف تنظیمات هنگام پاک کردن افزونه
 includes/
   icons.php                         آیکون‌های آماده و پاک‌سازی SVG
   class-tavoos-fcb-options.php      تنظیمات پیش‌فرض، انواع کانال و پاک‌سازی ورودی
   class-tavoos-fcb-frontend.php     نمایش دکمه در سایت
   class-tavoos-fcb-admin.php        صفحه تنظیمات در پیشخوان
-languages/                          فایل ترجمه فارسی (fa_IR) و قالب ترجمه (.pot)
+languages/                          قالب ترجمه (.pot)
 assets/css, assets/js               استایل و اسکریپت سایت و پیشخوان
+translations/                       ترجمه فارسی (.po/.mo) برای translate.wordpress.org — داخل zip نیست
+tools/build-translations.py         ساخت قالب ترجمه و به‌روزرسانی ترجمه فارسی — داخل zip نیست
 ```
 
 ## ترجمه
 
-متن‌های اصلی افزونه انگلیسی هستند و ترجمه فارسی همراه افزونه ارائه می‌شود؛ یعنی در سایت‌های فارسی همه‌چیز فارسی و در سایت‌های دیگر انگلیسی نمایش داده می‌شود. برای زبان‌های دیگر از فایل `languages/floating-call-button.pot` استفاده کنید.
+متن‌های اصلی افزونه انگلیسی هستند و ترجمه‌ها از طریق [translate.wordpress.org](https://translate.wordpress.org/) به‌صورت خودکار روی سایت‌ها نصب می‌شوند؛ یعنی در سایت‌های فارسی همه‌چیز فارسی و در سایت‌های دیگر انگلیسی نمایش داده می‌شود.
+
+- داخل افزونه فقط قالب ترجمه (`languages/tavoos-floating-call-button.pot`) قرار دارد.
+- ترجمه کامل فارسی در پوشه `translations/` مخزن است (خارج از فایل zip افزونه). بعد از تأیید افزونه در وردپرس، فایل `.po` را در translate.wordpress.org وارد کنید.
+- تا قبل از آن، اگر ترجمه فارسی را روی سایت خودتان می‌خواهید، فایل‌های `.po` و `.mo` را در مسیر `wp-content/languages/plugins/` قرار دهید.
+- بعد از تغییر متن‌ها در کد، دستور `python3 tools/build-translations.py` را اجرا کنید تا قالب ترجمه و ترجمه فارسی به‌روز شوند (ترجمه‌های قبلی حفظ می‌شوند و متن‌های ترجمه‌نشده فهرست می‌شوند).
+
+## ارتقا از نسخه ۱.۲ و قبل‌تر
+
+از نسخه ۱.۳ نام افزونه «Tavoos Floating Call Button» و نامک آن `tavoos-floating-call-button` است، پس در پوشه جدیدی نصب می‌شود. نسخه جدید را نصب کنید، افزونه قدیمی «Floating Call Button» را غیرفعال و حذف کنید و بعد نسخه جدید را فعال کنید؛ تنظیمات شما حفظ می‌شود. تا وقتی نسخه قدیمی فعال است، نسخه جدید کاری نمی‌کند و فقط یک پیام نشان می‌دهد.
 
 ## ارتقا از نسخه ۱.۱ و قبل‌تر
 

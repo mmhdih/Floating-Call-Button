@@ -2,7 +2,7 @@
 /**
  * Plugin settings: defaults, reading, migration and sanitization.
  *
- * @package Floating_Call_Button
+ * @package Tavoos_Floating_Call_Button
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,15 +18,15 @@ class Tavoos_FCB_Options {
 	 */
 	public static function positions() {
 		return array(
-			'bottom-right'  => __( 'Bottom right', 'floating-call-button' ),
-			'bottom-left'   => __( 'Bottom left', 'floating-call-button' ),
-			'bottom-center' => __( 'Bottom center', 'floating-call-button' ),
-			'middle-right'  => __( 'Middle right', 'floating-call-button' ),
-			'middle-left'   => __( 'Middle left', 'floating-call-button' ),
-			'top-right'     => __( 'Top right', 'floating-call-button' ),
-			'top-left'      => __( 'Top left', 'floating-call-button' ),
-			'top-center'    => __( 'Top center', 'floating-call-button' ),
-			'custom'        => __( 'Custom (percent)', 'floating-call-button' ),
+			'bottom-right'  => __( 'Bottom right', 'tavoos-floating-call-button' ),
+			'bottom-left'   => __( 'Bottom left', 'tavoos-floating-call-button' ),
+			'bottom-center' => __( 'Bottom center', 'tavoos-floating-call-button' ),
+			'middle-right'  => __( 'Middle right', 'tavoos-floating-call-button' ),
+			'middle-left'   => __( 'Middle left', 'tavoos-floating-call-button' ),
+			'top-right'     => __( 'Top right', 'tavoos-floating-call-button' ),
+			'top-left'      => __( 'Top left', 'tavoos-floating-call-button' ),
+			'top-center'    => __( 'Top center', 'tavoos-floating-call-button' ),
+			'custom'        => __( 'Custom (percent)', 'tavoos-floating-call-button' ),
 		);
 	}
 
@@ -42,122 +42,122 @@ class Tavoos_FCB_Options {
 			'tavoos_fcb_channel_types',
 			array(
 				'phone'     => array(
-					'label'         => __( 'Phone call', 'floating-call-button' ),
+					'label'         => __( 'Phone call', 'tavoos-floating-call-button' ),
 					'icon'          => 'phone',
 					'bg'            => '#FFF1C2',
 					'color'         => '#2B2118',
 					'placeholder'   => '+15551234567',
-					'hint'          => __( 'Phone number, preferably with the country code.', 'floating-call-button' ),
+					'hint'          => __( 'Phone number, preferably with the country code.', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 0,
 				),
 				'whatsapp'  => array(
-					'label'         => __( 'WhatsApp message', 'floating-call-button' ),
+					'label'         => __( 'WhatsApp message', 'tavoos-floating-call-button' ),
 					'icon'          => 'whatsapp',
 					'bg'            => '#25D366',
 					'color'         => '#FFFFFF',
 					'placeholder'   => '15551234567',
-					'hint'          => __( 'WhatsApp number with the country code, without + or leading zeros (e.g. 15551234567).', 'floating-call-button' ),
-					'message_label' => __( 'Default message', 'floating-call-button' ),
+					'hint'          => __( 'WhatsApp number with the country code, without + or leading zeros (e.g. 15551234567).', 'tavoos-floating-call-button' ),
+					'message_label' => __( 'Default message', 'tavoos-floating-call-button' ),
 					'new_tab'       => 1,
 				),
 				'telegram'  => array(
-					'label'         => __( 'Telegram', 'floating-call-button' ),
+					'label'         => __( 'Telegram', 'tavoos-floating-call-button' ),
 					'icon'          => 'telegram',
 					'bg'            => '#229ED9',
 					'color'         => '#FFFFFF',
 					'placeholder'   => 'username',
-					'hint'          => __( 'Telegram username (without @) or a full link.', 'floating-call-button' ),
+					'hint'          => __( 'Telegram username (without @) or a full link.', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 1,
 				),
 				'instagram' => array(
-					'label'         => __( 'Instagram', 'floating-call-button' ),
+					'label'         => __( 'Instagram', 'tavoos-floating-call-button' ),
 					'icon'          => 'instagram',
 					'bg'            => '#E1306C',
 					'color'         => '#FFFFFF',
 					'placeholder'   => 'username',
-					'hint'          => __( 'Instagram username or a full link.', 'floating-call-button' ),
+					'hint'          => __( 'Instagram username or a full link.', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 1,
 				),
 				'email'     => array(
-					'label'         => __( 'Email', 'floating-call-button' ),
+					'label'         => __( 'Email', 'tavoos-floating-call-button' ),
 					'icon'          => 'email',
 					'bg'            => '#EA4335',
 					'color'         => '#FFFFFF',
 					'placeholder'   => 'info@example.com',
-					'hint'          => __( 'Email address.', 'floating-call-button' ),
-					'message_label' => __( 'Default email subject', 'floating-call-button' ),
+					'hint'          => __( 'Email address.', 'tavoos-floating-call-button' ),
+					'message_label' => __( 'Default email subject', 'tavoos-floating-call-button' ),
 					'new_tab'       => 0,
 				),
 				'sms'       => array(
-					'label'         => __( 'SMS', 'floating-call-button' ),
+					'label'         => __( 'SMS', 'tavoos-floating-call-button' ),
 					'icon'          => 'sms',
 					'bg'            => '#4CAF50',
 					'color'         => '#FFFFFF',
 					'placeholder'   => '+15551234567',
-					'hint'          => __( 'Number that receives the SMS.', 'floating-call-button' ),
-					'message_label' => __( 'Default SMS text', 'floating-call-button' ),
+					'hint'          => __( 'Number that receives the SMS.', 'tavoos-floating-call-button' ),
+					'message_label' => __( 'Default SMS text', 'tavoos-floating-call-button' ),
 					'new_tab'       => 0,
 				),
 				'eitaa'     => array(
-					'label'         => __( 'Eitaa', 'floating-call-button' ),
+					'label'         => __( 'Eitaa', 'tavoos-floating-call-button' ),
 					'icon'          => 'eitaa',
 					'bg'            => '#EE7D23',
 					'color'         => '#FFFFFF',
 					'placeholder'   => 'username',
-					'hint'          => __( 'Eitaa username or a full link.', 'floating-call-button' ),
+					'hint'          => __( 'Eitaa username or a full link.', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 1,
 				),
 				'bale'      => array(
-					'label'         => __( 'Bale', 'floating-call-button' ),
+					'label'         => __( 'Bale', 'tavoos-floating-call-button' ),
 					'icon'          => 'bale',
 					'bg'            => '#35A99A',
 					'color'         => '#FFFFFF',
 					'placeholder'   => 'username',
-					'hint'          => __( 'Bale username or a full link.', 'floating-call-button' ),
+					'hint'          => __( 'Bale username or a full link.', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 1,
 				),
 				'rubika'    => array(
-					'label'         => __( 'Rubika', 'floating-call-button' ),
+					'label'         => __( 'Rubika', 'tavoos-floating-call-button' ),
 					'icon'          => 'rubika',
 					'bg'            => '#F4F1FA',
 					'color'         => '#6A3FA0',
 					'placeholder'   => 'username',
-					'hint'          => __( 'Rubika username or a full link.', 'floating-call-button' ),
+					'hint'          => __( 'Rubika username or a full link.', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 1,
 				),
 				'linkedin'  => array(
-					'label'         => __( 'LinkedIn', 'floating-call-button' ),
+					'label'         => __( 'LinkedIn', 'tavoos-floating-call-button' ),
 					'icon'          => 'linkedin',
 					'bg'            => '#0A66C2',
 					'color'         => '#FFFFFF',
 					'placeholder'   => 'https://www.linkedin.com/company/...',
-					'hint'          => __( 'Full link to your LinkedIn page.', 'floating-call-button' ),
+					'hint'          => __( 'Full link to your LinkedIn page.', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 1,
 				),
 				'location'  => array(
-					'label'         => __( 'Address on map', 'floating-call-button' ),
+					'label'         => __( 'Address on map', 'tavoos-floating-call-button' ),
 					'icon'          => 'location',
 					'bg'            => '#34A853',
 					'color'         => '#FFFFFF',
 					'placeholder'   => 'https://maps.google.com/...',
-					'hint'          => __( 'Link to Google Maps or another map service.', 'floating-call-button' ),
+					'hint'          => __( 'Link to Google Maps or another map service.', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 1,
 				),
 				'custom'    => array(
-					'label'         => __( 'Custom link', 'floating-call-button' ),
+					'label'         => __( 'Custom link', 'tavoos-floating-call-button' ),
 					'icon'          => 'link',
 					'bg'            => '#607D8B',
 					'color'         => '#FFFFFF',
 					'placeholder'   => 'https://example.com',
-					'hint'          => __( 'Any link (https:, tel:, mailto: and so on).', 'floating-call-button' ),
+					'hint'          => __( 'Any link (https:, tel:, mailto: and so on).', 'tavoos-floating-call-button' ),
 					'message_label' => '',
 					'new_tab'       => 1,
 				),
@@ -206,7 +206,7 @@ class Tavoos_FCB_Options {
 			// General.
 			'enabled'           => 1,
 			'single_direct'     => 0,
-			'aria_label'        => __( 'Contact us', 'floating-call-button' ),
+			'aria_label'        => __( 'Contact us', 'tavoos-floating-call-button' ),
 			'direction'         => 'auto',
 
 			// Display rules.
@@ -248,12 +248,12 @@ class Tavoos_FCB_Options {
 
 			// Channels.
 			'channels'          => array(
-				self::channel_defaults( 'phone', array( 'subtitle' => __( 'Call us now', 'floating-call-button' ) ) ),
+				self::channel_defaults( 'phone', array( 'subtitle' => __( 'Call us now', 'tavoos-floating-call-button' ) ) ),
 				self::channel_defaults(
 					'whatsapp',
 					array(
-						'subtitle' => __( 'Quick replies from our team', 'floating-call-button' ),
-						'message'  => __( 'Hello, I am contacting you from your website.', 'floating-call-button' ),
+						'subtitle' => __( 'Quick replies from our team', 'tavoos-floating-call-button' ),
+						'message'  => __( 'Hello, I am contacting you from your website.', 'tavoos-floating-call-button' ),
 					)
 				),
 				self::channel_defaults( 'telegram', array( 'enabled' => 0 ) ),
@@ -285,17 +285,41 @@ class Tavoos_FCB_Options {
 	}
 
 	/**
-	 * Move settings saved by version 1.1 and earlier (option `fcb_settings`) to the new option name.
+	 * Option names used by earlier versions, newest first.
+	 *
+	 * 1.2 (slug floating-call-button) used `tavoos_fcb_settings`, 1.1 and earlier `fcb_settings`.
+	 * Their uninstall scripts delete these options, so the settings are copied to
+	 * TAVOOS_FCB_OPTION before an old copy can be deleted.
+	 *
+	 * @return string[]
+	 */
+	public static function legacy_options() {
+		return array( 'tavoos_fcb_settings', 'fcb_settings' );
+	}
+
+	/**
+	 * Take over the settings of an earlier version, once.
+	 *
+	 * The newest old option wins, even over a copy made while this plugin was idle next to
+	 * the old one, because the old plugin was in use until now. The old options are then
+	 * deleted. (While an old copy is active, the main plugin file only fills in a missing
+	 * option, without using this class.)
+	 *
+	 * Hooked to `plugins_loaded`, so it takes no arguments.
 	 */
 	public static function maybe_migrate() {
-		$legacy = get_option( 'fcb_settings' );
-		if ( false === $legacy ) {
-			return;
+		$copied = false;
+		foreach ( self::legacy_options() as $legacy_name ) {
+			$legacy = get_option( $legacy_name );
+			if ( false === $legacy ) {
+				continue;
+			}
+			if ( ! $copied && is_array( $legacy ) ) {
+				update_option( TAVOOS_FCB_OPTION, $legacy );
+				$copied = true;
+			}
+			delete_option( $legacy_name );
 		}
-		if ( false === get_option( TAVOOS_FCB_OPTION ) && is_array( $legacy ) ) {
-			add_option( TAVOOS_FCB_OPTION, $legacy );
-		}
-		delete_option( 'fcb_settings' );
 	}
 
 	/**

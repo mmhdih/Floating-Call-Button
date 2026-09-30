@@ -1,4 +1,8 @@
 docs export-ignore
+tools export-ignore
+translations export-ignore
 README.md export-ignore
 .gitattributes export-ignore
 .github export-ignore
+*.mo binary
+*.png binary
